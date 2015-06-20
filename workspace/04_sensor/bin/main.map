@@ -266,6 +266,7 @@ LOAD tweak.o
 LOAD ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
 LOAD ../../libraries/libstm32f10x.a
 LOAD ../../libraries/rtos.a
+LOAD lib/lib.a
 LOAD /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libstdc++.a
 LOAD /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libm.a
 START GROUP

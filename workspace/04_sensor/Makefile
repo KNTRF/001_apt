@@ -4,7 +4,7 @@ INCLUDE_DIRS  = -I ../../libraries \
 				-I ../../libraries/STM32F10x_StdPeriph_Driver/inc \
 				-I ../../libraries/CMSIS/Device/ST/STM32F10x \
 				-I ../../libraries/CMSIS/Include \
-				-I ../../libraries/util \
+				-I lib \
 				-I ../../libraries/FreeRTOS/inc \
 				-I arm-none-eabi/include \
 				-I arm-none-eabi/include/c++/4.7.4 \
@@ -28,19 +28,17 @@ CXXFLAGS= -Os -fsigned-char -fno-rtti -fno-exceptions -Wall -fmessage-length=0 $
 ASFLAGS = -x assembler-with-cpp -c $(TARGET_ARCH) $(CXXFLAGS) 
 LDFLAGS = -Wl,--gc-sections,-Map=bin/main.map,-cref -T 128_20_dfu.ld $(INCLUDE_DIRS) -lstdc++ -L arm-none-eabi/lib/thumb -L ../../libraries
 
-all: libstm32f10x rtos startup bin/main.hex bin/main.bin
+all: libstm32f10x rtos local_lib startup bin/main.hex bin/main.bin
 
 # main.o is compiled by suffix rule automatucally
-bin/main.hex: $(patsubst %.c,%.o,$(wildcard *.c)) $(patsubst %.cpp,%.o,$(wildcard *.cpp)) $(STARTUP_DIR)startup_stm32f10x_hd.o ../../libraries/libstm32f10x.a ../../libraries/rtos.a
+bin/main.hex: $(patsubst %.c,%.o,$(wildcard *.c)) $(patsubst %.cpp,%.o,$(wildcard *.cpp)) $(STARTUP_DIR)startup_stm32f10x_hd.o ../../libraries/libstm32f10x.a ../../libraries/rtos.a ./lib/lib.a
 	$(LD) $(LDFLAGS) $(TARGET_ARCH) $^ -o bin/main.elf 
 	$(OBJCOPY) -O ihex bin/main.elf bin/main.hex
 
 # many of xxx.o are compiled by suffix rule automatically
 LIB_OBJS = $(sort \
  $(patsubst %.c,%.o,$(wildcard ../../libraries/STM32F10x_StdPeriph_Driver/src/*.c)) \
- $(patsubst %.c,%.o,$(wildcard ../../libraries/CMSIS/Device/ST/STM32F10x/*.c)) \
- $(patsubst %.c,%.o,$(wildcard ../../libraries/util/*.c)) \
- $(patsubst %.cpp,%.o,$(wildcard ../../libraries/util/*.cpp)))
+ $(patsubst %.c,%.o,$(wildcard ../../libraries/CMSIS/Device/ST/STM32F10x/*.c)))
 
 libstm32f10x: $(LIB_OBJS)
 	$(AR) cr ../../libraries/libstm32f10x.a $(LIB_OBJS)
@@ -53,14 +51,12 @@ $(LIB_OBJS): \
  $(wildcard ../../libraries/STM32F10x_StdPeriph_Driver/src/*.c) \
  $(wildcard ../../libraries/CMSIS/Device/ST/STM32F10x/*.h) \
  $(wildcard ../../libraries/CMSIS/Device/ST/STM32F10x/*.c) \
- $(wildcard ../../libraries/util/*.h) \
- $(wildcard ../../libraries/util/*.c) \
- $(wildcard ../../libraries/util/*.cpp) \
  Makefile
 
 
 #-----------------------------------------------------------------------------------------
 # fukuda added
+
 # convert
 bin/main.bin: 
 	$(OBJCOPY) -O binary bin/main.elf bin/main.bin
@@ -68,6 +64,7 @@ bin/main.bin:
 flash:
 	dfu-util -a0 0x0483:0xdf11 -s 0x08003000 -D bin/main.bin -d 0x0483
 
+# FreeRTOS--------------------------------------------------------------
 RTOS_OBJS = $(sort \
  $(patsubst %.c,%.o,$(wildcard ../../libraries/FreeRTOS/src/*.c)))
 
@@ -78,7 +75,22 @@ $(RTOS_OBJS): \
  $(wildcard ../../libraries/FreeRTOS/inc/*.h) \
  $(wildcard ../../libraries/FreeRTOS/src/*.c)
 
+# Local Libraries----------------------------------------------------------
+LOCAL_LIB_OBJS = $(sort \
+ $(patsubst %.c,%.o,$(wildcard lib/*.c)) \
+ $(patsubst %.cpp,%.o,$(wildcard lib/*.cpp)))
+
+local_lib: $(LOCAL_LIB_OBJS)
+	$(AR) cr lib/lib.a $(LOCAL_LIB_OBJS)
+
+$(LOCAL_LIB_OBJS): \
+ $(wildcard lib/*.h) \
+ $(wildcard lib/*.c) \
+ $(wildcard lib/*.cpp) \
+
 #------------------------------------------------------------------------------------------
 
 clean:
-	rm -f *.o *.s bin/* ../../libraries/util/*.o
+	rm -f *.o *.s *.a bin/* lib/*.o lib/*.a
+	
+	
