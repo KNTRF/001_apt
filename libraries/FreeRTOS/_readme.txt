@@ -1,17 +1,19 @@
-Each real time kernel port consists of three files that contain the core kernel
-components and are common to every port, and one or more files that are 
-specific to a particular microcontroller and or compiler.
+＜概要＞
+FreeRTOS v8.2.1をベースに以下を修正
 
-+ The FreeRTOS/Source directory contains the three files that are common to 
-every port - list.c, queue.c and tasks.c.  The kernel is contained within these 
-three files.  croutine.c implements the optional co-routine functionality - which
-is normally only used on very memory limited systems.
+＜変更点＞
+①オリジナルのFreeRTOSのフォルダ構成を整理
+　＜/inc内のファイルの元位置＞
+　/include
+　
+　＜/src内のファイルの元位置＞
+　/*.c 6files
+　/portable/GCC/ARM_CM3/port.c
+　/portable/GCC/ARM_CM3/portmacro.c
+　/portable/MemMang/heap2.c
 
-+ The FreeRTOS/Source/Portable directory contains the files that are specific to 
-a particular microcontroller and or compiler.
+②一部ファイルの修正。(ファイル位置関係)
+　deprecated_definitions.h　201行目 #ifdef GCC_ARMCM3内
 
-+ The FreeRTOS/Source/include directory contains the real time kernel header 
-files.
-
-See the readme file in the FreeRTOS/Source/Portable directory for more 
-information.
+＜参考URL＞
+・http://www.fumi2kick.com/komekame/archives/1172
