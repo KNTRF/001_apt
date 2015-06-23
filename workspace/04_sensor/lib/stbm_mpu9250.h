@@ -25,21 +25,22 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #define _STBM_MPU9250_H
 
 #include "stm32f10x.h"
+uint8_t mpu9250_ak8963_writes(uint8_t akm_addr, uint8_t reg_addr, uint8_t len, uint8_t* data){
 
-/*
-#define MPU9250_I2C_MST_CTRL            0x24
-#define MPU9250_I2C_SLV0_ADDR           0x25
-#define MPU9250_I2C_SLV0_REG            0x26
-#define MPU9250_I2C_SLV0_CTRL           0x27
-#define MPU9250_I2C_SLV1_ADDR           0x28
-#define MPU9250_I2C_SLV1_REG            0x29
-#define MPU9250_I2C_SLV1_CTRL           0x2A
-#define MPU9250_I2C_SLV2_ADDR           0x2B
-#define MPU9250_I2C_SLV2_REG            0x2C
-#define MPU9250_I2C_SLV2_CTRL           0x2D
-#define MPU9250_I2C_SLV3_ADDR           0x2E
-#define MPU9250_I2C_SLV3_REG            0x2F
-#define MPU9250_I2C_SLV3_CTRL           0x30
+
+//#define MPU9250_I2C_MST_CTRL            0x24
+//#define MPU9250_I2C_SLV0_ADDR           0x25
+//#define MPU9250_I2C_SLV0_REG            0x26
+//#define MPU9250_I2C_SLV0_CTRL           0x27
+//#define MPU9250_I2C_SLV1_ADDR           0x28
+//#define MPU9250_I2C_SLV1_REG            0x29
+//#define MPU9250_I2C_SLV1_CTRL           0x2A
+//#define MPU9250_I2C_SLV2_ADDR           0x2B
+//#define MPU9250_I2C_SLV2_REG            0x2C
+//#define MPU9250_I2C_SLV2_CTRL           0x2D
+//#define MPU9250_I2C_SLV3_ADDR           0x2E
+//#define MPU9250_I2C_SLV3_REG            0x2F
+//#define MPU9250_I2C_SLV3_CTRL           0x30
 #define MPU9250_I2C_SLV4_ADDR           0x31
 #define MPU9250_I2C_SLV4_REG            0x32
 #define MPU9250_I2C_SLV4_DO             0x33
@@ -53,30 +54,13 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 #define MPU9250_I2C_IF_DIS (0x10)
 #define MPU9250_I2C_MST_EN (0x20)
-#define MPU9250_FIFO_RST (0x04)
-#define MPU9250_FIFO_ENABLE (0x40)
+//#define MPU9250_FIFO_RST (0x04)
+//#define MPU9250_FIFO_ENABLE (0x40)
 
-#define MPU9250_SPIx_ADDR 0x00
+//#define MPU9250_SPIx_ADDR 0x00
 #define MPU9250_I2C_READ 0x80
-#define MPU9250_SPIx_BR_CLEAR_MASK 0xFFC7
+//#define MPU9250_SPIx_BR_CLEAR_MASK 0xFFC7
 
-//low hardware functions
-void MPU9250_Init(void);
-u8 MPU9250_SPIx_SendByte(u8 data);
-void MPU9250_SPIx_SetDivisor(u16 data);
-
-//
-u8 MPU9250_SPIx_Read(u8 addr, u8 reg_addr);
-int MPU9250_SPIx_Reads(u8 addr, u8 reg_addr, u8 len, u8* data);
-int MPU9250_SPIx_Write(u8 addr, u8 reg_addr, u8 data);
-int MPU9250_SPIx_Writes(u8 addr, u8 reg_addr, u8 len, u8* data);
-
-//global function use for eMPL
-int MPU9250_AK8963_SPIx_Read(u8 akm_addr, u8 reg_addr, u8* data);
-int MPU9250_AK8963_SPIx_Reads(u8 akm_addr, u8 reg_addr, u8 len, u8* data);
-int MPU9250_AK8963_SPIx_Write(u8 akm_addr, u8 reg_addr, u8 data);
-int MPU9250_AK8963_SPIx_Writes(u8 akm_addr, u8 reg_addr, u8 len, u8* data);
-*/
 
 // SPI1
 #define  SPI1_PORT                       GPIOA
@@ -87,13 +71,18 @@ int MPU9250_AK8963_SPIx_Writes(u8 akm_addr, u8 reg_addr, u8 len, u8* data);
 #define  SPI1_MISO_PIN                   GPIO_Pin_6
 #define  SPI1_MOSI_PIN                   GPIO_Pin_7
 
+// functions
 void    mpu9250_init();
 void    mpu9250_select_cs();
 void    mpu9250_deselect_cs();
 uint8_t mpu9250_send_byte(uint8_t byte);
-uint8_t mpu9250_read(uint8_t addr, uint8_t reg_addr);
-uint8_t mpu9250_reads(uint8_t addr, uint8_t reg_addr, uint8_t len, uint8_t* data);
-uint8_t mpu9250_write(uint8_t addr, uint8_t reg_addr, uint8_t data);
-uint8_t mpu9250_writes(uint8_t addr, uint8_t reg_addr, uint8_t len, uint8_t* data);
+uint8_t mpu9250_read(uint8_t reg_addr);
+uint8_t mpu9250_reads(uint8_t reg_addr, uint8_t len, uint8_t* data);
+uint8_t mpu9250_write(uint8_t reg_addr, uint8_t data);
+uint8_t mpu9250_writes(uint8_t reg_addr, uint8_t len, uint8_t* data);
+uint8_t mpu9250_ak8963_read(uint8_t akm_addr, uint8_t reg_addr, uint8_t* data);
+uint8_t mpu9250_ak8963_reads(uint8_t akm_addr, uint8_t reg_addr, uint8_t len, uint8_t* data);
+uint8_t mpu9250_ak8963_write(uint8_t akm_addr, uint8_t reg_addr, uint8_t data);
+uint8_t mpu9250_ak8963_writes(uint8_t akm_addr, uint8_t reg_addr, uint8_t len, uint8_t* data);
 
 #endif

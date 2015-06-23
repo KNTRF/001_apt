@@ -8,6 +8,7 @@ extern "C" {
 // C
 extern "C" {
 	#include "stbm_delay.h"
+	#include "stbm_mpu9250.h"
 	
 	// FreeRTOS
 	#include "FreeRTOSConfig.h"

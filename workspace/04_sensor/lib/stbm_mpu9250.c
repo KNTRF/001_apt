@@ -22,6 +22,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
 #include "stbm_mpu9250.h"
+#include "stbm_delay.h"
 
 
 void mpu9250_init(){
@@ -76,7 +77,7 @@ uint8_t mpu9250_send_byte(uint8_t byte){
 	return SPI_I2S_ReceiveData(SPI1);
 }
 
-uint8_t mpu9250_read(uint8_t addr, uint8_t reg_addr){
+uint8_t mpu9250_read(uint8_t reg_addr){
 	uint8_t dummy = 0;
 	uint8_t data = 0;
 	
@@ -88,7 +89,7 @@ uint8_t mpu9250_read(uint8_t addr, uint8_t reg_addr){
 	return data;
 }
 
-uint8_t mpu9250_reads(uint8_t addr, uint8_t reg_addr, uint8_t len, uint8_t* data){
+uint8_t mpu9250_reads(uint8_t reg_addr, uint8_t len, uint8_t* data){
 	uint32_t i = 0;
 	uint8_t dummy = 0x00;
 	
@@ -102,20 +103,20 @@ uint8_t mpu9250_reads(uint8_t addr, uint8_t reg_addr, uint8_t len, uint8_t* data
 	return 0;
 }
 
-uint8_t mpu9250_write(uint8_t addr, uint8_t reg_addr, uint8_t data){
+uint8_t mpu9250_write(uint8_t reg_addr, uint8_t data){
 	mpu9250_select_cs();
-	mpu9250_sent_byte(reg_addr);
-	mpu9250_sent_byte(data);
+	mpu9250_send_byte(reg_addr);
+	mpu9250_send_byte(data);
 	mpu9250_deselect_cs();
 	
 	return 0;
 }
 
-uint8_t mpu9250_writes(uint8_t addr, uint8_t reg_addr, uint8_t len, uint8_t* data){
+uint8_t mpu9250_writes(uint8_t reg_addr, uint8_t len, uint8_t* data){
 	uint32_t i = 0;
 	
 	mpu9250_select_cs();
-	mpu9250_sent_byte(reg_addr);
+	mpu9250_send_byte(reg_addr);
 	while(i < len){
 		mpu9250_send_byte(data[i++]);
 	}
@@ -124,170 +125,117 @@ uint8_t mpu9250_writes(uint8_t addr, uint8_t reg_addr, uint8_t len, uint8_t* dat
 	return 0;
 }
 
-/*
-//////////////////////////////////////////////////////////////////////////
-//init
-void MPU9250_Init(void)
-{
-	SPIx_Init(pMPU9250);
-}
 
-int MPU9250_SPIx_Write(u8 addr, u8 reg_addr, u8 data){
-	CHIP_SELECT(pMPU9250);
-	MPU9250_SPIx_SendByte(reg_addr);
-	MPU9250_SPIx_SendByte(data);
-	CHIP_DESELECT(pMPU9250);
-	return 0;
-}
+uint8_t mpu9250_ak8963_read(uint8_t akm_addr, uint8_t reg_addr, uint8_t* data) {
+	uint8_t status = 0;
+	uint32_t timeout = 0;
 
-int MPU9250_SPIx_Writes(u8 addr, u8 reg_addr, u8 len, u8* data){
-	u32 i = 0;
-	CHIP_SELECT(pMPU9250);
-	MPU9250_SPIx_SendByte(reg_addr);
-	while(i < len){
-		MPU9250_SPIx_SendByte(data[i++]);
-	}
-	CHIP_DESELECT(pMPU9250);
-	return 0;
-}
-
-u8 MPU9250_SPIx_Read(u8 addr, u8 reg_addr)
-{
-	u8 dummy = 0;
-	u8 data = 0;
-
-	CHIP_SELECT(pMPU9250);
-	MPU9250_SPIx_SendByte(0x80 | reg_addr);
-	data = MPU9250_SPIx_SendByte(dummy);
-	CHIP_DESELECT(pMPU9250);
-	return data;
-}
-
-int MPU9250_SPIx_Reads(u8 addr, u8 reg_addr, u8 len, u8* data){
-	u32 i = 0;
-	u8 dummy = 0x00;
-
-	CHIP_SELECT(pMPU9250);
-	MPU9250_SPIx_SendByte(MPU9250_I2C_READ | reg_addr);
-	while(i < len){
-		data[i++] = MPU9250_SPIx_SendByte(dummy);
-	}
-	CHIP_DESELECT(pMPU9250);
-	return 0;
-}
-
-int MPU9250_AK8963_SPIx_Read(u8 akm_addr, u8 reg_addr, u8* data) {
-	u8 status = 0;
-	u32 timeout = 0;
-
-	MPU9250_SPIx_Writes(MPU9250_SPIx_ADDR, MPU9250_I2C_SLV4_REG, 1, &reg_addr);
-	Delay_Ms(1);
+	mpu9250_writes(MPU9250_I2C_SLV4_REG, 1, &reg_addr);
+	delay_ms(1);
 	reg_addr = akm_addr | MPU9250_I2C_READ;
-	MPU9250_SPIx_Writes(MPU9250_SPIx_ADDR, MPU9250_I2C_SLV4_ADDR, 1, &reg_addr);
-	Delay_Ms(1);
+	mpu9250_writes(MPU9250_I2C_SLV4_ADDR, 1, &reg_addr);
+	delay_ms(1);
 	reg_addr = MPU9250_I2C_SLV4_EN;
-	MPU9250_SPIx_Writes(MPU9250_SPIx_ADDR, MPU9250_I2C_SLV4_CTRL, 1, &reg_addr);
-	Delay_Ms(1);
+	mpu9250_writes(MPU9250_I2C_SLV4_CTRL, 1, &reg_addr);
+	delay_ms(1);
 
 	do {
 		if (timeout++ > 50){
 			return -2;
 		}
-		MPU9250_SPIx_Reads(MPU9250_SPIx_ADDR, MPU9250_I2C_MST_STATUS, 1, &status);
-		Delay_Ms(1);
+		mpu9250_reads(MPU9250_I2C_MST_STATUS, 1, &status);
+		delay_ms(1);
 	} while ((status & MPU9250_I2C_SLV4_DONE) == 0);
-	MPU9250_SPIx_Reads(MPU9250_SPIx_ADDR, MPU9250_I2C_SLV4_DI, 1, data);
+	mpu9250_reads(MPU9250_I2C_SLV4_DI, 1, data);
 	return 0;
 }
 
-int MPU9250_AK8963_SPIx_Reads(u8 akm_addr, u8 reg_addr, u8 len, u8* data){
-	u8 index = 0;
-	u8 status = 0;
-	u32 timeout = 0;
-	u8 tmp = 0;
+uint8_t mpu9250_ak8963_reads(uint8_t akm_addr, uint8_t reg_addr, uint8_t len, uint8_t* data){
+	uint8_t index = 0;
+	uint8_t status = 0;
+	uint32_t timeout = 0;
+	uint8_t tmp = 0;
 
 	tmp = akm_addr | MPU9250_I2C_READ;
-	MPU9250_SPIx_Writes(MPU9250_SPIx_ADDR, MPU9250_I2C_SLV4_ADDR, 1, &tmp);
-	Delay_Ms(1);
+	mpu9250_writes(MPU9250_I2C_SLV4_ADDR, 1, &tmp);
+	delay_ms(1);
 	while(index < len){
 		tmp = reg_addr + index;
-		MPU9250_SPIx_Writes(MPU9250_SPIx_ADDR, MPU9250_I2C_SLV4_REG, 1, &tmp);
-		Delay_Ms(1);
+		mpu9250_writes(MPU9250_I2C_SLV4_REG, 1, &tmp);
+		delay_ms(1);
 		tmp = MPU9250_I2C_SLV4_EN;
-		MPU9250_SPIx_Writes(MPU9250_SPIx_ADDR, MPU9250_I2C_SLV4_CTRL, 1, &tmp);
-		Delay_Ms(1);
+		mpu9250_writes(MPU9250_I2C_SLV4_CTRL, 1, &tmp);
+		delay_ms(1);
 
 		do {
 			if (timeout++ > 50){
 				return -2;
 			}
-			MPU9250_SPIx_Reads(MPU9250_SPIx_ADDR, MPU9250_I2C_MST_STATUS, 1, &status);
-			Delay_Ms(2);
+			mpu9250_reads(MPU9250_I2C_MST_STATUS, 1, &status);
+			delay_ms(2);
 		} while ((status & MPU9250_I2C_SLV4_DONE) == 0);
-		MPU9250_SPIx_Reads(MPU9250_SPIx_ADDR, MPU9250_I2C_SLV4_DI, 1, data + index);
-		Delay_Ms(1);
+		mpu9250_reads(MPU9250_I2C_SLV4_DI, 1, data + index);
+		delay_ms(1);
 		index++;
 	}
 	return 0;
 }
 
-int MPU9250_AK8963_SPIx_Write(u8 akm_addr, u8 reg_addr, u8 data)
-{
-	u32 timeout = 0;
+uint8_t mpu9250_ak8963_write(uint8_t akm_addr, uint8_t reg_addr, uint8_t data){
+	uint32_t timeout = 0;
 	uint8_t status = 0;
-	u8 tmp = 0;
+	uint8_t tmp = 0;
 
 	tmp = akm_addr;
-	MPU9250_SPIx_Writes(MPU9250_SPIx_ADDR, MPU9250_I2C_SLV4_ADDR, 1, &tmp);
-	Delay_Ms(1);
+	mpu9250_writes(MPU9250_I2C_SLV4_ADDR, 1, &tmp);
+	delay_ms(1);
 	tmp = reg_addr;
-	MPU9250_SPIx_Writes(MPU9250_SPIx_ADDR, MPU9250_I2C_SLV4_REG, 1, &tmp);
-	Delay_Ms(1);
+	mpu9250_writes(MPU9250_I2C_SLV4_REG, 1, &tmp);
+	delay_ms(1);
 	tmp = data;
-	MPU9250_SPIx_Writes(MPU9250_SPIx_ADDR, MPU9250_I2C_SLV4_DO, 1, &tmp);
-	Delay_Ms(1);
+	mpu9250_writes(MPU9250_I2C_SLV4_DO, 1, &tmp);
+	delay_ms(1);
 	tmp = MPU9250_I2C_SLV4_EN;
-	MPU9250_SPIx_Writes(MPU9250_SPIx_ADDR, MPU9250_I2C_SLV4_CTRL, 1, &tmp);
-	Delay_Ms(1);
+	mpu9250_writes(MPU9250_I2C_SLV4_CTRL, 1, &tmp);
+	delay_ms(1);
 
 	do {
 		if (timeout++ > 50)
 			return -2;
 
-		MPU9250_SPIx_Reads(MPU9250_SPIx_ADDR, MPU9250_I2C_MST_STATUS, 1, &status);
-		Delay_Ms(1);
+		mpu9250_reads(MPU9250_I2C_MST_STATUS, 1, &status);
+		delay_ms(1);
 	} while ((status & MPU9250_I2C_SLV4_DONE) == 0);
 	if (status & MPU9250_I2C_SLV4_NACK)
 		return -3;
 	return 0;
 }
 
-int MPU9250_AK8963_SPIx_Writes(u8 akm_addr, u8 reg_addr, u8 len, u8* data)
-{
-	u32 timeout = 0;
+uint8_t mpu9250_ak8963_writes(uint8_t akm_addr, uint8_t reg_addr, uint8_t len, uint8_t* data){
+	uint32_t timeout = 0;
 	uint8_t status = 0;
-	u8 tmp = 0;
-	u8 index = 0;
+	uint8_t tmp = 0;
+	uint8_t index = 0;
 
 	tmp = akm_addr;
-	MPU9250_SPIx_Writes(MPU9250_SPIx_ADDR, MPU9250_I2C_SLV4_ADDR, 1, &tmp);
-	Delay_Ms(1);
+	mpu9250_writes(MPU9250_I2C_SLV4_ADDR, 1, &tmp);
+	delay_ms(1);
 
 	while(index < len){
 		tmp = reg_addr + index;
-		MPU9250_SPIx_Writes(MPU9250_SPIx_ADDR, MPU9250_I2C_SLV4_REG, 1, &tmp);
-		Delay_Ms(1);
-		MPU9250_SPIx_Writes(MPU9250_SPIx_ADDR, MPU9250_I2C_SLV4_DO, 1, data + index);
-		Delay_Ms(1);
+		mpu9250_writes(MPU9250_I2C_SLV4_REG, 1, &tmp);
+		delay_ms(1);
+		mpu9250_writes(MPU9250_I2C_SLV4_DO, 1, data + index);
+		delay_ms(1);
 		tmp = MPU9250_I2C_SLV4_EN;
-		MPU9250_SPIx_Writes(MPU9250_SPIx_ADDR, MPU9250_I2C_SLV4_CTRL, 1, &tmp);
-		Delay_Ms(1);
+		mpu9250_writes(MPU9250_I2C_SLV4_CTRL, 1, &tmp);
+		delay_ms(1);
 
 		do {
 			if (timeout++ > 50)
 				return -2;
-			MPU9250_SPIx_Reads(MPU9250_SPIx_ADDR, MPU9250_I2C_MST_STATUS, 1, &status);
-			Delay_Ms(1);
+			mpu9250_reads(MPU9250_I2C_MST_STATUS, 1, &status);
+			delay_ms(1);
 		} while ((status & MPU9250_I2C_SLV4_DONE) == 0);
 		if (status & MPU9250_I2C_SLV4_NACK)
 			return -3;
@@ -295,4 +243,4 @@ int MPU9250_AK8963_SPIx_Writes(u8 akm_addr, u8 reg_addr, u8 len, u8* data)
 	}
 	return 0;
 }
-*/
+
