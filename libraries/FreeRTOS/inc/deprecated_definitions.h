@@ -202,7 +202,7 @@ projects should not use them. */
 	/*
 	#include "../../Source/portable/GCC/ARM_CM3/portmacro.h"
 	*/
-	#include "../src/portmacro.h"
+	#include "../inc/portmacro.h"
 #endif
 
 #ifdef IAR_ARM_CM3

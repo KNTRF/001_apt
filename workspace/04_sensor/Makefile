@@ -28,10 +28,10 @@ CXXFLAGS= -Os -fsigned-char -fno-rtti -fno-exceptions -Wall -fmessage-length=0 $
 ASFLAGS = -x assembler-with-cpp -c $(TARGET_ARCH) $(CXXFLAGS) 
 LDFLAGS = -Wl,--gc-sections,-Map=bin/main.map,-cref -T 128_20_dfu.ld $(INCLUDE_DIRS) -lstdc++ -L arm-none-eabi/lib/thumb -L ../../libraries
 
-all: libstm32f10x rtos local_lib startup bin/main.hex bin/main.bin
+all: libstm32f10x rtos local_lib local_lib_cpp startup bin/main.hex bin/main.bin
 
 # main.o is compiled by suffix rule automatucally
-bin/main.hex: $(patsubst %.c,%.o,$(wildcard *.c)) $(patsubst %.cpp,%.o,$(wildcard *.cpp)) $(STARTUP_DIR)startup_stm32f10x_hd.o ../../libraries/libstm32f10x.a ../../libraries/rtos.a ./lib/lib.a
+bin/main.hex: $(patsubst %.c,%.o,$(wildcard *.c)) $(patsubst %.cpp,%.o,$(wildcard *.cpp)) $(STARTUP_DIR)startup_stm32f10x_hd.o lib/lib.a lib/libcpp.a ../../libraries/libstm32f10x.a ../../libraries/rtos.a
 	$(LD) $(LDFLAGS) $(TARGET_ARCH) $^ -o bin/main.elf 
 	$(OBJCOPY) -O ihex bin/main.elf bin/main.hex
 
@@ -77,16 +77,25 @@ $(RTOS_OBJS): \
 
 # Local Libraries----------------------------------------------------------
 LOCAL_LIB_OBJS = $(sort \
- $(patsubst %.c,%.o,$(wildcard lib/*.c)) \
- $(patsubst %.cpp,%.o,$(wildcard lib/*.cpp)))
+ $(patsubst %.c,%.o,$(wildcard lib/*.c)))
 
 local_lib: $(LOCAL_LIB_OBJS)
 	$(AR) cr lib/lib.a $(LOCAL_LIB_OBJS)
 
 $(LOCAL_LIB_OBJS): \
  $(wildcard lib/*.h) \
- $(wildcard lib/*.c) \
- $(wildcard lib/*.cpp) \
+ $(wildcard lib/*.c)
+ 
+ # Local Libraries CPP--------------------------------------------------------
+LOCAL_LIB_CPP_OBJS = $(sort \
+ $(patsubst %.cpp,%.o,$(wildcard lib/*.cpp)))
+
+local_lib_cpp: $(LOCAL_LIB_CPP_OBJS)
+	$(AR) cr lib/libcpp.a $(LOCAL_LIB_CPP_OBJS)
+
+$(LOCAL_LIB_CPP_OBJS): \
+ $(wildcard lib/*.hpp) \
+ $(wildcard lib/*.cpp)
 
 #------------------------------------------------------------------------------------------
 

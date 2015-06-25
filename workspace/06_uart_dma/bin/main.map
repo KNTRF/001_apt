@@ -1,0 +1,1128 @@
+Archive member included because of file (symbol)
+
+lib/lib.a(stbm_delay.o)       main.o (delay_ms)
+lib/lib.a(stbm_uart.o)        main.o (xbee_init)
+../../libraries/libstm32f10x.a(misc.o)
+                              lib/lib.a(stbm_uart.o) (NVIC_Init)
+../../libraries/libstm32f10x.a(stm32f10x_dma.o)
+                              lib/lib.a(stbm_uart.o) (DMA_DeInit)
+../../libraries/libstm32f10x.a(stm32f10x_gpio.o)
+                              main.o (GPIO_Init)
+../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+                              lib/lib.a(stbm_uart.o) (RCC_AHBPeriphClockCmd)
+../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+                              lib/lib.a(stbm_delay.o) (TIM_TimeBaseInit)
+../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+                              lib/lib.a(stbm_uart.o) (USART_Init)
+/usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__atexit.o)
+                              /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/crt0.o (__register_exitproc)
+/usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-errno.o)
+                              syscalls.o (__errno)
+/usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-exit.o)
+                              /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/crt0.o (exit)
+/usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fini.o)
+                              /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/crt0.o (__libc_fini_array)
+/usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-impure.o)
+                              /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__atexit.o) (_global_impure_ptr)
+/usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-init.o)
+                              /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/crt0.o (__libc_init_array)
+/usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memset.o)
+                              /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/crt0.o (memset)
+/usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strlen.o)
+                              lib/lib.a(stbm_uart.o) (strlen)
+/usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
+                              /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-exit.o) (__call_exitprocs)
+/usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-atexit.o)
+                              /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o) (atexit)
+
+Allocating common symbols
+Common symbol       size              file
+
+TxData              0x40              lib/lib.a(stbm_uart.o)
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crti.o
+ .data          0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crti.o
+ .bss           0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crti.o
+ .init          0x0000000000000000        0x4 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crti.o
+ .fini          0x0000000000000000        0x4 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crti.o
+ .ARM.attributes
+                0x0000000000000000       0x1d /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crti.o
+ .text          0x0000000000000000       0x54 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtbegin.o
+ .data          0x0000000000000000        0x4 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtbegin.o
+ .bss           0x0000000000000000       0x1c /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtbegin.o
+ .init_array    0x0000000000000000        0x4 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtbegin.o
+ .fini_array    0x0000000000000000        0x4 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtbegin.o
+ .eh_frame      0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtbegin.o
+ .jcr           0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtbegin.o
+ .ARM.attributes
+                0x0000000000000000       0x2d /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtbegin.o
+ .text          0x0000000000000000       0x70 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+ .data          0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+ .bss           0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+ .ARM.extab     0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+ .ARM.exidx     0x0000000000000000        0x8 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+ .ARM.attributes
+                0x0000000000000000       0x1b /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+ .text          0x0000000000000000        0x0 main.o
+ .data          0x0000000000000000        0x0 main.o
+ .bss           0x0000000000000000        0x0 main.o
+ .data          0x0000000000000000        0x0 stm32f10x_it.o
+ .bss           0x0000000000000000        0x0 stm32f10x_it.o
+ .text          0x0000000000000000       0x70 syscalls.o
+ .data          0x0000000000000000        0x0 syscalls.o
+ .bss           0x0000000000000000        0x4 syscalls.o
+ .comment       0x0000000000000000       0x71 syscalls.o
+ .ARM.attributes
+                0x0000000000000000       0x33 syscalls.o
+ .bss           0x0000000000000000        0x0 system_stm32f10x.o
+ .text          0x0000000000000000       0x14 ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+ .data          0x0000000000000000        0x0 ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+ .bss           0x0000000000000000        0x0 ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+ .bss           0x0000000000000000        0x0 lib/lib.a(stbm_delay.o)
+ .data          0x0000000000000000        0x0 lib/lib.a(stbm_uart.o)
+ .data          0x0000000000000000        0x0 ../../libraries/libstm32f10x.a(misc.o)
+ .bss           0x0000000000000000        0x0 ../../libraries/libstm32f10x.a(misc.o)
+ .data          0x0000000000000000        0x0 ../../libraries/libstm32f10x.a(stm32f10x_dma.o)
+ .bss           0x0000000000000000        0x0 ../../libraries/libstm32f10x.a(stm32f10x_dma.o)
+ .data          0x0000000000000000        0x0 ../../libraries/libstm32f10x.a(stm32f10x_gpio.o)
+ .bss           0x0000000000000000        0x0 ../../libraries/libstm32f10x.a(stm32f10x_gpio.o)
+ .bss           0x0000000000000000        0x0 ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+ .data          0x0000000000000000        0x0 ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+ .bss           0x0000000000000000        0x0 ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+ .data          0x0000000000000000        0x0 ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+ .bss           0x0000000000000000        0x0 ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+ .text          0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__atexit.o)
+ .data          0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__atexit.o)
+ .bss           0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__atexit.o)
+ .text.__register_exitproc
+                0x0000000000000000       0xac /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__atexit.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__atexit.o)
+ .debug_frame   0x0000000000000000       0x34 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__atexit.o)
+ .text          0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-errno.o)
+ .data          0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-errno.o)
+ .bss           0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-errno.o)
+ .text.__errno  0x0000000000000000        0xc /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-errno.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-errno.o)
+ .debug_frame   0x0000000000000000       0x20 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-errno.o)
+ .text          0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-exit.o)
+ .data          0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-exit.o)
+ .bss           0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-exit.o)
+ .text.exit     0x0000000000000000       0x20 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-exit.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-exit.o)
+ .debug_frame   0x0000000000000000       0x28 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-exit.o)
+ .text          0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fini.o)
+ .data          0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fini.o)
+ .bss           0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fini.o)
+ .text.__libc_fini_array
+                0x0000000000000000       0x50 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fini.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fini.o)
+ .debug_frame   0x0000000000000000       0x2c /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fini.o)
+ .text          0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-impure.o)
+ .data          0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-impure.o)
+ .bss           0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-impure.o)
+ .data.impure_data
+                0x0000000000000000      0x428 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-impure.o)
+ .data._impure_ptr
+                0x0000000000000000        0x4 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-impure.o)
+ .rodata.str1.4
+                0x0000000000000000        0x4 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-impure.o)
+ .rodata._global_impure_ptr
+                0x0000000000000000        0x4 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-impure.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-impure.o)
+ .text          0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-init.o)
+ .data          0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-init.o)
+ .bss           0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-init.o)
+ .text.__libc_init_array
+                0x0000000000000000       0x94 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-init.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-init.o)
+ .debug_frame   0x0000000000000000       0x30 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-init.o)
+ .text          0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memset.o)
+ .data          0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memset.o)
+ .bss           0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memset.o)
+ .text.memset   0x0000000000000000      0x12c /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memset.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memset.o)
+ .debug_frame   0x0000000000000000       0x2c /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memset.o)
+ .text          0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strlen.o)
+ .data          0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strlen.o)
+ .bss           0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strlen.o)
+ .text          0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
+ .data          0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
+ .bss           0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
+ .text.startup.register_fini
+                0x0000000000000000       0x14 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
+ .init_array.00000
+                0x0000000000000000        0x4 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
+ .text.__call_exitprocs
+                0x0000000000000000      0x288 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
+ .debug_frame   0x0000000000000000       0x48 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
+ .text          0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-atexit.o)
+ .data          0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-atexit.o)
+ .bss           0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-atexit.o)
+ .text.atexit   0x0000000000000000        0xc /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-atexit.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-atexit.o)
+ .debug_frame   0x0000000000000000       0x20 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-atexit.o)
+ .text          0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtend.o
+ .data          0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtend.o
+ .bss           0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtend.o
+ .eh_frame      0x0000000000000000        0x4 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtend.o
+ .jcr           0x0000000000000000        0x4 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtend.o
+ .ARM.attributes
+                0x0000000000000000       0x2d /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtend.o
+ .text          0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtn.o
+ .data          0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtn.o
+ .bss           0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtn.o
+ .init          0x0000000000000000        0x8 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtn.o
+ .fini          0x0000000000000000        0x8 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtn.o
+ .ARM.attributes
+                0x0000000000000000       0x1d /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+RAM              0x0000000020000000 0x0000000000005000 xrw
+FLASH            0x0000000008003000 0x000000000001d000 xr
+FLASHB1          0x0000000000000000 0x0000000000000000 xr
+EXTMEMB0         0x0000000000000000 0x0000000000000000 xr
+EXTMEMB1         0x0000000000000000 0x0000000000000000 xr
+EXTMEMB2         0x0000000000000000 0x0000000000000000 xr
+EXTMEMB3         0x0000000000000000 0x0000000000000000 xr
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crti.o
+LOAD /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtbegin.o
+LOAD /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+LOAD main.o
+LOAD stm32f10x_it.o
+LOAD syscalls.o
+LOAD system_stm32f10x.o
+LOAD ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+LOAD lib/lib.a
+LOAD ../../libraries/libstm32f10x.a
+LOAD ../../libraries/rtos.a
+START GROUP
+LOAD /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/libgcc.a
+LOAD /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a
+END GROUP
+LOAD /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtend.o
+LOAD /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtn.o
+                0x0000000000000400                __Stack_Size = 0x400
+                0x0000000000000400                PROVIDE (_Stack_Size, __Stack_Size)
+                0x0000000020004c00                __Stack_Init = (_estack - __Stack_Size)
+                0x0000000020004c00                PROVIDE (_Stack_Init, __Stack_Init)
+                0x0000000000000800                _Minimum_Stack_Size = 0x800
+                0x0000000020005000                _estack = 0x20005000
+
+.isr_vector     0x0000000008003000      0x1e4
+                0x0000000008003000                . = ALIGN (0x4)
+ *(.isr_vector)
+ .isr_vector    0x0000000008003000      0x1e4 ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+                0x0000000008003000                g_pfnVectors
+                0x00000000080031e4                . = ALIGN (0x4)
+
+.flashtext      0x00000000080031e4        0x0
+                0x00000000080031e4                . = ALIGN (0x4)
+ *(.flashtext)
+                0x00000000080031e4                . = ALIGN (0x4)
+
+.text           0x00000000080031e4     0x1e64
+                0x00000000080031e4                . = ALIGN (0x4)
+ *(.text)
+ .text          0x00000000080031e4       0x12 stm32f10x_it.o
+                0x00000000080031e4                NMI_Handler
+                0x00000000080031e6                HardFault_Handler
+                0x00000000080031e8                MemManage_Handler
+                0x00000000080031ea                BusFault_Handler
+                0x00000000080031ec                UsageFault_Handler
+                0x00000000080031ee                SVC_Handler
+                0x00000000080031f0                DebugMon_Handler
+                0x00000000080031f2                PendSV_Handler
+                0x00000000080031f4                SysTick_Handler
+ *fill*         0x00000000080031f6        0x2 00
+ .text          0x00000000080031f8      0x168 system_stm32f10x.o
+                0x00000000080031f8                SystemInit
+                0x00000000080032f4                SystemCoreClockUpdate
+ .text          0x0000000008003360       0x90 lib/lib.a(stbm_delay.o)
+                0x0000000008003360                delay_core
+                0x000000000800339a                delay_ms
+                0x00000000080033c4                delay_us
+ .text          0x00000000080033f0      0x1cc lib/lib.a(stbm_uart.o)
+                0x00000000080033f0                xbee_init
+                0x000000000800347c                xbee_dma_configuration
+                0x00000000080034d4                xbee_send_string
+                0x0000000008003538                xbee_nvic_configuration
+                0x0000000008003558                DMA1_Channel7_IRQHandler
+ .text          0x00000000080035bc       0xc0 ../../libraries/libstm32f10x.a(misc.o)
+                0x00000000080035bc                NVIC_PriorityGroupConfig
+                0x00000000080035d0                NVIC_Init
+                0x0000000008003638                NVIC_SetVectorTable
+                0x000000000800364c                NVIC_SystemLPConfig
+                0x0000000008003664                SysTick_CLKSourceConfig
+ .text          0x000000000800367c      0x1dc ../../libraries/libstm32f10x.a(stm32f10x_dma.o)
+                0x000000000800367c                DMA_DeInit
+                0x000000000800376c                DMA_Init
+                0x00000000080037ac                DMA_StructInit
+                0x00000000080037c6                DMA_Cmd
+                0x00000000080037dc                DMA_ITConfig
+                0x00000000080037ec                DMA_SetCurrDataCounter
+                0x00000000080037f0                DMA_GetCurrDataCounter
+                0x00000000080037f6                DMA_GetFlagStatus
+                0x0000000008003814                DMA_ClearFlag
+                0x0000000008003828                DMA_GetITStatus
+                0x0000000008003844                DMA_ClearITPendingBit
+ .text          0x0000000008003858      0x288 ../../libraries/libstm32f10x.a(stm32f10x_gpio.o)
+                0x0000000008003858                GPIO_DeInit
+                0x0000000008003904                GPIO_AFIODeInit
+                0x000000000800391a                GPIO_Init
+                0x00000000080039ba                GPIO_StructInit
+                0x00000000080039ca                GPIO_ReadInputDataBit
+                0x00000000080039d6                GPIO_ReadInputData
+                0x00000000080039dc                GPIO_ReadOutputDataBit
+                0x00000000080039e8                GPIO_ReadOutputData
+                0x00000000080039ee                GPIO_SetBits
+                0x00000000080039f2                GPIO_ResetBits
+                0x00000000080039f6                GPIO_WriteBit
+                0x0000000008003a00                GPIO_Write
+                0x0000000008003a04                GPIO_PinLockConfig
+                0x0000000008003a14                GPIO_EventOutputConfig
+                0x0000000008003a30                GPIO_EventOutputCmd
+                0x0000000008003a3c                GPIO_PinRemapConfig
+                0x0000000008003aa0                GPIO_EXTILineConfig
+                0x0000000008003ad4                GPIO_ETH_MediaInterfaceConfig
+ .text          0x0000000008003ae0      0x34c ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+                0x0000000008003ae0                RCC_DeInit
+                0x0000000008003b20                RCC_HSEConfig
+                0x0000000008003b54                RCC_AdjustHSICalibrationValue
+                0x0000000008003b68                RCC_HSICmd
+                0x0000000008003b74                RCC_PLLConfig
+                0x0000000008003b88                RCC_PLLCmd
+                0x0000000008003b94                RCC_SYSCLKConfig
+                0x0000000008003ba8                RCC_GetSYSCLKSource
+                0x0000000008003bb8                RCC_HCLKConfig
+                0x0000000008003bcc                RCC_PCLK1Config
+                0x0000000008003be0                RCC_PCLK2Config
+                0x0000000008003bf4                RCC_ITConfig
+                0x0000000008003c0c                RCC_USBCLKConfig
+                0x0000000008003c18                RCC_ADCCLKConfig
+                0x0000000008003c2c                RCC_LSEConfig
+                0x0000000008003c4c                RCC_LSICmd
+                0x0000000008003c58                RCC_RTCCLKConfig
+                0x0000000008003c68                RCC_RTCCLKCmd
+                0x0000000008003c74                RCC_GetClocksFreq
+                0x0000000008003d0c                RCC_AHBPeriphClockCmd
+                0x0000000008003d24                RCC_APB2PeriphClockCmd
+                0x0000000008003d3c                RCC_APB1PeriphClockCmd
+                0x0000000008003d54                RCC_APB2PeriphResetCmd
+                0x0000000008003d6c                RCC_APB1PeriphResetCmd
+                0x0000000008003d84                RCC_BackupResetCmd
+                0x0000000008003d90                RCC_ClockSecuritySystemCmd
+                0x0000000008003d9c                RCC_MCOConfig
+                0x0000000008003da8                RCC_GetFlagStatus
+                0x0000000008003dd0                RCC_WaitForHSEStartUp
+                0x0000000008003dfc                RCC_ClearFlag
+                0x0000000008003e0c                RCC_GetITStatus
+                0x0000000008003e20                RCC_ClearITPendingBit
+ .text          0x0000000008003e2c      0xc9c ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+                0x0000000008003f0c                TIM_DeInit
+                0x00000000080040b8                TIM_TimeBaseInit
+                0x000000000800414c                TIM_OC1Init
+                0x00000000080041d4                TIM_OC2Init
+                0x000000000800425c                TIM_OC3Init
+                0x00000000080042e0                TIM_OC4Init
+                0x0000000008004348                TIM_BDTRConfig
+                0x000000000800436a                TIM_TimeBaseStructInit
+                0x000000000800437c                TIM_OCStructInit
+                0x0000000008004390                TIM_ICStructInit
+                0x00000000080043a0                TIM_BDTRStructInit
+                0x00000000080043b2                TIM_Cmd
+                0x00000000080043ca                TIM_CtrlPWMOutputs
+                0x00000000080043e6                TIM_ITConfig
+                0x00000000080043f8                TIM_GenerateEvent
+                0x00000000080043fc                TIM_DMAConfig
+                0x0000000008004404                TIM_DMACmd
+                0x0000000008004416                TIM_InternalClockConfig
+                0x0000000008004424                TIM_ITRxExternalClockConfig
+                0x000000000800443e                TIM_TIxExternalClockConfig
+                0x0000000008004472                TIM_ETRConfig
+                0x0000000008004486                TIM_ETRClockMode2Config
+                0x000000000800449a                TIM_ETRClockMode1Config
+                0x00000000080044b4                TIM_PrescalerConfig
+                0x00000000080044ba                TIM_CounterModeConfig
+                0x00000000080044ca                TIM_SelectInputTrigger
+                0x00000000080044da                TIM_EncoderInterfaceConfig
+                0x0000000008004516                TIM_ForcedOC1Config
+                0x0000000008004526                TIM_ForcedOC2Config
+                0x000000000800453a                TIM_ForcedOC3Config
+                0x000000000800454a                TIM_ForcedOC4Config
+                0x000000000800455e                TIM_ARRPreloadConfig
+                0x0000000008004576                TIM_SelectCOM
+                0x000000000800458e                TIM_SelectCCDMA
+                0x00000000080045a6                TIM_CCPreloadControl
+                0x00000000080045be                TIM_OC1PreloadConfig
+                0x00000000080045ce                TIM_OC2PreloadConfig
+                0x00000000080045e2                TIM_OC3PreloadConfig
+                0x00000000080045f2                TIM_OC4PreloadConfig
+                0x0000000008004606                TIM_OC1FastConfig
+                0x0000000008004616                TIM_OC2FastConfig
+                0x000000000800462a                TIM_OC3FastConfig
+                0x000000000800463a                TIM_OC4FastConfig
+                0x000000000800464e                TIM_ClearOC1Ref
+                0x000000000800465e                TIM_ClearOC2Ref
+                0x000000000800466e                TIM_ClearOC3Ref
+                0x000000000800467e                TIM_ClearOC4Ref
+                0x000000000800468e                TIM_OC1PolarityConfig
+                0x000000000800469e                TIM_OC1NPolarityConfig
+                0x00000000080046ae                TIM_OC2PolarityConfig
+                0x00000000080046c2                TIM_OC2NPolarityConfig
+                0x00000000080046d6                TIM_OC3PolarityConfig
+                0x00000000080046ea                TIM_OC3NPolarityConfig
+                0x00000000080046fe                TIM_OC4PolarityConfig
+                0x0000000008004712                TIM_CCxCmd
+                0x0000000008004734                TIM_CCxNCmd
+                0x0000000008004756                TIM_SelectOCxM
+                0x000000000800479a                TIM_UpdateDisableConfig
+                0x00000000080047b2                TIM_UpdateRequestConfig
+                0x00000000080047ca                TIM_SelectHallSensor
+                0x00000000080047e2                TIM_SelectOnePulseMode
+                0x00000000080047f8                TIM_SelectOutputTrigger
+                0x000000000800480e                TIM_SelectSlaveMode
+                0x0000000008004824                TIM_SelectMasterSlaveMode
+                0x000000000800483a                TIM_SetCounter
+                0x000000000800483e                TIM_SetAutoreload
+                0x0000000008004842                TIM_SetCompare1
+                0x0000000008004846                TIM_SetCompare2
+                0x000000000800484a                TIM_SetCompare3
+                0x000000000800484e                TIM_SetCompare4
+                0x0000000008004854                TIM_SetIC1Prescaler
+                0x000000000800486a                TIM_SetIC2Prescaler
+                0x0000000008004884                TIM_PWMIConfig
+                0x00000000080048f2                TIM_SetIC3Prescaler
+                0x0000000008004908                TIM_SetIC4Prescaler
+                0x0000000008004922                TIM_ICInit
+                0x0000000008004a58                TIM_SetClockDivision
+                0x0000000008004a6e                TIM_GetCapture1
+                0x0000000008004a74                TIM_GetCapture2
+                0x0000000008004a7a                TIM_GetCapture3
+                0x0000000008004a80                TIM_GetCapture4
+                0x0000000008004a88                TIM_GetCounter
+                0x0000000008004a8e                TIM_GetPrescaler
+                0x0000000008004a94                TIM_GetFlagStatus
+                0x0000000008004aa0                TIM_ClearFlag
+                0x0000000008004aa8                TIM_GetITStatus
+                0x0000000008004abe                TIM_ClearITPendingBit
+ .text          0x0000000008004ac8      0x3a4 ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+                0x0000000008004ac8                USART_DeInit
+                0x0000000008004b60                USART_Init
+                0x0000000008004c10                USART_StructInit
+                0x0000000008004c26                USART_ClockInit
+                0x0000000008004c46                USART_ClockStructInit
+                0x0000000008004c52                USART_Cmd
+                0x0000000008004c6a                USART_ITConfig
+                0x0000000008004c9e                USART_DMACmd
+                0x0000000008004cb0                USART_SetAddress
+                0x0000000008004cc6                USART_WakeUpConfig
+                0x0000000008004cdc                USART_ReceiverWakeUpCmd
+                0x0000000008004cf4                USART_LINBreakDetectLengthConfig
+                0x0000000008004d0a                USART_LINCmd
+                0x0000000008004d22                USART_SendData
+                0x0000000008004d2a                USART_ReceiveData
+                0x0000000008004d32                USART_SendBreak
+                0x0000000008004d3e                USART_SetGuardTime
+                0x0000000008004d50                USART_SetPrescaler
+                0x0000000008004d62                USART_SmartCardCmd
+                0x0000000008004d7a                USART_SmartCardNACKCmd
+                0x0000000008004d92                USART_HalfDuplexCmd
+                0x0000000008004daa                USART_OverSampling8Cmd
+                0x0000000008004dc2                USART_OneBitMethodCmd
+                0x0000000008004dda                USART_IrDAConfig
+                0x0000000008004df0                USART_IrDACmd
+                0x0000000008004e08                USART_GetFlagStatus
+                0x0000000008004e14                USART_ClearFlag
+                0x0000000008004e1c                USART_GetITStatus
+                0x0000000008004e5c                USART_ClearITPendingBit
+ *(.text.*)
+ .text.startup  0x0000000008004e6c       0xb4 main.o
+                0x0000000008004e6c                main
+ .text.Reset_Handler
+                0x0000000008004f20       0x4c ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+                0x0000000008004f20                Reset_Handler
+ .text.Default_Handler
+                0x0000000008004f6c        0x4 ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+                0x0000000008004f6c                DMA2_Channel3_IRQHandler
+                0x0000000008004f6c                TIM8_TRG_COM_IRQHandler
+                0x0000000008004f6c                TIM8_CC_IRQHandler
+                0x0000000008004f6c                TIM1_CC_IRQHandler
+                0x0000000008004f6c                TIM6_IRQHandler
+                0x0000000008004f6c                PVD_IRQHandler
+                0x0000000008004f6c                SDIO_IRQHandler
+                0x0000000008004f6c                EXTI3_IRQHandler
+                0x0000000008004f6c                EXTI0_IRQHandler
+                0x0000000008004f6c                I2C2_EV_IRQHandler
+                0x0000000008004f6c                ADC1_2_IRQHandler
+                0x0000000008004f6c                SPI1_IRQHandler
+                0x0000000008004f6c                TAMPER_IRQHandler
+                0x0000000008004f6c                TIM8_UP_IRQHandler
+                0x0000000008004f6c                DMA2_Channel2_IRQHandler
+                0x0000000008004f6c                DMA1_Channel4_IRQHandler
+                0x0000000008004f6c                USART3_IRQHandler
+                0x0000000008004f6c                RTC_IRQHandler
+                0x0000000008004f6c                CAN1_RX1_IRQHandler
+                0x0000000008004f6c                UART5_IRQHandler
+                0x0000000008004f6c                ADC3_IRQHandler
+                0x0000000008004f6c                TIM4_IRQHandler
+                0x0000000008004f6c                DMA2_Channel1_IRQHandler
+                0x0000000008004f6c                I2C1_EV_IRQHandler
+                0x0000000008004f6c                DMA1_Channel6_IRQHandler
+                0x0000000008004f6c                UART4_IRQHandler
+                0x0000000008004f6c                TIM3_IRQHandler
+                0x0000000008004f6c                RCC_IRQHandler
+                0x0000000008004f6c                TIM1_TRG_COM_IRQHandler
+                0x0000000008004f6c                DMA1_Channel1_IRQHandler
+                0x0000000008004f6c                Default_Handler
+                0x0000000008004f6c                EXTI15_10_IRQHandler
+                0x0000000008004f6c                TIM7_IRQHandler
+                0x0000000008004f6c                TIM5_IRQHandler
+                0x0000000008004f6c                EXTI9_5_IRQHandler
+                0x0000000008004f6c                SPI2_IRQHandler
+                0x0000000008004f6c                DMA1_Channel5_IRQHandler
+                0x0000000008004f6c                EXTI4_IRQHandler
+                0x0000000008004f6c                USB_LP_CAN1_RX0_IRQHandler
+                0x0000000008004f6c                USB_HP_CAN1_TX_IRQHandler
+                0x0000000008004f6c                DMA1_Channel3_IRQHandler
+                0x0000000008004f6c                FSMC_IRQHandler
+                0x0000000008004f6c                TIM1_UP_IRQHandler
+                0x0000000008004f6c                WWDG_IRQHandler
+                0x0000000008004f6c                TIM2_IRQHandler
+                0x0000000008004f6c                TIM1_BRK_IRQHandler
+                0x0000000008004f6c                EXTI1_IRQHandler
+                0x0000000008004f6c                RTCAlarm_IRQHandler
+                0x0000000008004f6c                DMA2_Channel4_5_IRQHandler
+                0x0000000008004f6c                USART2_IRQHandler
+                0x0000000008004f6c                I2C2_ER_IRQHandler
+                0x0000000008004f6c                DMA1_Channel2_IRQHandler
+                0x0000000008004f6c                TIM8_BRK_IRQHandler
+                0x0000000008004f6c                CAN1_SCE_IRQHandler
+                0x0000000008004f6c                FLASH_IRQHandler
+                0x0000000008004f6c                USART1_IRQHandler
+                0x0000000008004f6c                SPI3_IRQHandler
+                0x0000000008004f6c                I2C1_ER_IRQHandler
+                0x0000000008004f6c                USBWakeUp_IRQHandler
+                0x0000000008004f6c                EXTI2_IRQHandler
+ .text.strlen   0x0000000008004f70       0x60 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strlen.o)
+                0x0000000008004f70                strlen
+ *(.rodata)
+ .rodata        0x0000000008004fd0       0x73 main.o
+                0x0000000008004fd0                Message_A
+                0x0000000008004fe7                Message_B
+                0x0000000008004ffe                Message_C
+                0x0000000008005015                Message_D
+                0x000000000800502c                Message_E
+ *(.rodata*)
+ .rodata.str1.1
+                0x0000000008005043        0x3 main.o
+ *(.glue_7)
+ .glue_7        0x0000000000000000        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x0000000000000000        0x0 linker stubs
+                0x0000000008005048                . = ALIGN (0x4)
+ *fill*         0x0000000008005046        0x2 00
+                0x0000000008005048                _etext = .
+                0x0000000008005048                _sidata = _etext
+
+.vfp11_veneer   0x0000000008005048        0x0
+ .vfp11_veneer  0x0000000000000000        0x0 linker stubs
+
+.v4_bx          0x0000000008005048        0x0
+ .v4_bx         0x0000000000000000        0x0 linker stubs
+
+.iplt           0x0000000008005048        0x0
+ .iplt          0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtbegin.o
+
+.rel.dyn        0x0000000008005048        0x0
+ .rel.iplt      0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtbegin.o
+
+.data           0x0000000020000000       0x3c load address 0x0000000008005048
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                _sdata = .
+ *(.data)
+ .data          0x0000000020000000       0x14 system_stm32f10x.o
+                0x0000000020000000                SystemCoreClock
+                0x0000000020000004                AHBPrescTable
+ .data          0x0000000020000014       0x14 lib/lib.a(stbm_delay.o)
+                0x0000000020000014                TIM_TimeBaseStructureMili
+                0x000000002000001e                TIM_TimeBaseStructureMicro
+ .data          0x0000000020000028       0x14 ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+ *(.data.*)
+                0x000000002000003c                . = ALIGN (0x4)
+                0x000000002000003c                _edata = .
+
+.igot.plt       0x000000002000003c        0x0 load address 0x0000000008005084
+ .igot.plt      0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtbegin.o
+
+.bss            0x000000002000003c       0x44 load address 0x0000000008005084
+                0x000000002000003c                . = ALIGN (0x4)
+                0x000000002000003c                _sbss = .
+ *(.bss)
+ .bss           0x000000002000003c        0x2 lib/lib.a(stbm_uart.o)
+                0x000000002000003c                index_tx_current
+                0x000000002000003d                index_tx_add
+ *(COMMON)
+ *fill*         0x000000002000003e        0x2 00
+ COMMON         0x0000000020000040       0x40 lib/lib.a(stbm_uart.o)
+                0x0000000020000040                TxData
+                0x0000000020000080                . = ALIGN (0x4)
+                0x0000000020000080                _ebss = .
+                0x0000000020000080                PROVIDE (end, _ebss)
+                0x0000000020000080                PROVIDE (_end, _ebss)
+
+._usrstack      0x0000000020000080      0x800 load address 0x00000000080050c8
+                0x0000000020000080                . = ALIGN (0x4)
+                0x0000000020000080                _susrstack = .
+                0x0000000020000880                . = (. + _Minimum_Stack_Size)
+ *fill*         0x0000000020000080      0x800 00
+                0x0000000020000880                . = ALIGN (0x4)
+                0x0000000020000880                _eusrstack = .
+
+.b1text
+ *(.b1text)
+ *(.b1rodata)
+ *(.b1rodata*)
+
+.eb0text
+ *(.eb0text)
+ *(.eb0rodata)
+ *(.eb0rodata*)
+
+.eb1text
+ *(.eb1text)
+ *(.eb1rodata)
+ *(.eb1rodata*)
+
+.eb2text
+ *(.eb2text)
+ *(.eb2rodata)
+ *(.eb2rodata*)
+
+.eb3text
+ *(.eb3text)
+ *(.eb3rodata)
+ *(.eb3rodata*)
+
+DISCARD
+ libc.a(*)
+ libm.a(*)
+ libgcc.a(*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x70
+ *(.comment)
+ .comment       0x0000000000000000       0x70 main.o
+                                         0x71 (size before relaxing)
+ .comment       0x0000000000000000       0x71 stm32f10x_it.o
+ .comment       0x0000000000000000       0x71 system_stm32f10x.o
+ .comment       0x0000000000000000       0x71 lib/lib.a(stbm_delay.o)
+ .comment       0x0000000000000000       0x71 lib/lib.a(stbm_uart.o)
+ .comment       0x0000000000000000       0x71 ../../libraries/libstm32f10x.a(misc.o)
+ .comment       0x0000000000000000       0x71 ../../libraries/libstm32f10x.a(stm32f10x_dma.o)
+ .comment       0x0000000000000000       0x71 ../../libraries/libstm32f10x.a(stm32f10x_gpio.o)
+ .comment       0x0000000000000000       0x71 ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+ .comment       0x0000000000000000       0x71 ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+ .comment       0x0000000000000000       0x71 ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+
+.ARM.attributes
+                0x0000000000000000       0x29
+ .ARM.attributes
+                0x0000000000000000       0x33 main.o
+ .ARM.attributes
+                0x0000000000000033       0x33 stm32f10x_it.o
+ .ARM.attributes
+                0x0000000000000066       0x33 system_stm32f10x.o
+ .ARM.attributes
+                0x0000000000000099       0x21 ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+ .ARM.attributes
+                0x00000000000000ba       0x33 lib/lib.a(stbm_delay.o)
+ .ARM.attributes
+                0x00000000000000ed       0x33 lib/lib.a(stbm_uart.o)
+ .ARM.attributes
+                0x0000000000000120       0x33 ../../libraries/libstm32f10x.a(misc.o)
+ .ARM.attributes
+                0x0000000000000153       0x33 ../../libraries/libstm32f10x.a(stm32f10x_dma.o)
+ .ARM.attributes
+                0x0000000000000186       0x33 ../../libraries/libstm32f10x.a(stm32f10x_gpio.o)
+ .ARM.attributes
+                0x00000000000001b9       0x33 ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+ .ARM.attributes
+                0x00000000000001ec       0x33 ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+ .ARM.attributes
+                0x000000000000021f       0x33 ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+ .ARM.attributes
+                0x0000000000000252       0x2d /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strlen.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info .gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame    0x0000000000000000       0x20
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000       0x20 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strlen.o)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+OUTPUT(bin/main.elf elf32-littlearm)
+
+Cross Reference Table
+
+Symbol                                            File
+ADC1_2_IRQHandler                                 ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+ADC3_IRQHandler                                   ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+AHBPrescTable                                     system_stm32f10x.o
+BusFault_Handler                                  stm32f10x_it.o
+CAN1_RX1_IRQHandler                               ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+CAN1_SCE_IRQHandler                               ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+DMA1_Channel1_IRQHandler                          ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+DMA1_Channel2_IRQHandler                          ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+DMA1_Channel3_IRQHandler                          ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+DMA1_Channel4_IRQHandler                          ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+DMA1_Channel5_IRQHandler                          ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+DMA1_Channel6_IRQHandler                          ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+DMA1_Channel7_IRQHandler                          lib/lib.a(stbm_uart.o)
+                                                  ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+DMA2_Channel1_IRQHandler                          ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+DMA2_Channel2_IRQHandler                          ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+DMA2_Channel3_IRQHandler                          ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+DMA2_Channel4_5_IRQHandler                        ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+DMA_ClearFlag                                     ../../libraries/libstm32f10x.a(stm32f10x_dma.o)
+DMA_ClearITPendingBit                             ../../libraries/libstm32f10x.a(stm32f10x_dma.o)
+                                                  lib/lib.a(stbm_uart.o)
+DMA_Cmd                                           ../../libraries/libstm32f10x.a(stm32f10x_dma.o)
+                                                  lib/lib.a(stbm_uart.o)
+DMA_DeInit                                        ../../libraries/libstm32f10x.a(stm32f10x_dma.o)
+                                                  lib/lib.a(stbm_uart.o)
+DMA_GetCurrDataCounter                            ../../libraries/libstm32f10x.a(stm32f10x_dma.o)
+DMA_GetFlagStatus                                 ../../libraries/libstm32f10x.a(stm32f10x_dma.o)
+DMA_GetITStatus                                   ../../libraries/libstm32f10x.a(stm32f10x_dma.o)
+                                                  lib/lib.a(stbm_uart.o)
+DMA_ITConfig                                      ../../libraries/libstm32f10x.a(stm32f10x_dma.o)
+                                                  lib/lib.a(stbm_uart.o)
+DMA_Init                                          ../../libraries/libstm32f10x.a(stm32f10x_dma.o)
+                                                  lib/lib.a(stbm_uart.o)
+DMA_SetCurrDataCounter                            ../../libraries/libstm32f10x.a(stm32f10x_dma.o)
+DMA_StructInit                                    ../../libraries/libstm32f10x.a(stm32f10x_dma.o)
+DebugMon_Handler                                  stm32f10x_it.o
+Default_Handler                                   ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+EXTI0_IRQHandler                                  ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+EXTI15_10_IRQHandler                              ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+EXTI1_IRQHandler                                  ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+EXTI2_IRQHandler                                  ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+EXTI3_IRQHandler                                  ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+EXTI4_IRQHandler                                  ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+EXTI9_5_IRQHandler                                ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+FLASH_IRQHandler                                  ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+FSMC_IRQHandler                                   ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+GPIO_AFIODeInit                                   ../../libraries/libstm32f10x.a(stm32f10x_gpio.o)
+GPIO_DeInit                                       ../../libraries/libstm32f10x.a(stm32f10x_gpio.o)
+GPIO_ETH_MediaInterfaceConfig                     ../../libraries/libstm32f10x.a(stm32f10x_gpio.o)
+GPIO_EXTILineConfig                               ../../libraries/libstm32f10x.a(stm32f10x_gpio.o)
+GPIO_EventOutputCmd                               ../../libraries/libstm32f10x.a(stm32f10x_gpio.o)
+GPIO_EventOutputConfig                            ../../libraries/libstm32f10x.a(stm32f10x_gpio.o)
+GPIO_Init                                         ../../libraries/libstm32f10x.a(stm32f10x_gpio.o)
+                                                  lib/lib.a(stbm_uart.o)
+                                                  main.o
+GPIO_PinLockConfig                                ../../libraries/libstm32f10x.a(stm32f10x_gpio.o)
+GPIO_PinRemapConfig                               ../../libraries/libstm32f10x.a(stm32f10x_gpio.o)
+GPIO_ReadInputData                                ../../libraries/libstm32f10x.a(stm32f10x_gpio.o)
+GPIO_ReadInputDataBit                             ../../libraries/libstm32f10x.a(stm32f10x_gpio.o)
+GPIO_ReadOutputData                               ../../libraries/libstm32f10x.a(stm32f10x_gpio.o)
+GPIO_ReadOutputDataBit                            ../../libraries/libstm32f10x.a(stm32f10x_gpio.o)
+GPIO_ResetBits                                    ../../libraries/libstm32f10x.a(stm32f10x_gpio.o)
+GPIO_SetBits                                      ../../libraries/libstm32f10x.a(stm32f10x_gpio.o)
+GPIO_StructInit                                   ../../libraries/libstm32f10x.a(stm32f10x_gpio.o)
+GPIO_Write                                        ../../libraries/libstm32f10x.a(stm32f10x_gpio.o)
+GPIO_WriteBit                                     ../../libraries/libstm32f10x.a(stm32f10x_gpio.o)
+HardFault_Handler                                 stm32f10x_it.o
+I2C1_ER_IRQHandler                                ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+I2C1_EV_IRQHandler                                ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+I2C2_ER_IRQHandler                                ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+I2C2_EV_IRQHandler                                ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+MemManage_Handler                                 stm32f10x_it.o
+Message_A                                         main.o
+Message_B                                         main.o
+Message_C                                         main.o
+Message_D                                         main.o
+Message_E                                         main.o
+NMI_Handler                                       stm32f10x_it.o
+NVIC_Init                                         ../../libraries/libstm32f10x.a(misc.o)
+                                                  lib/lib.a(stbm_uart.o)
+NVIC_PriorityGroupConfig                          ../../libraries/libstm32f10x.a(misc.o)
+NVIC_SetVectorTable                               ../../libraries/libstm32f10x.a(misc.o)
+                                                  main.o
+NVIC_SystemLPConfig                               ../../libraries/libstm32f10x.a(misc.o)
+PVD_IRQHandler                                    ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+PendSV_Handler                                    stm32f10x_it.o
+RCC_ADCCLKConfig                                  ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+RCC_AHBPeriphClockCmd                             ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+                                                  lib/lib.a(stbm_uart.o)
+RCC_APB1PeriphClockCmd                            ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+                                                  lib/lib.a(stbm_uart.o)
+                                                  lib/lib.a(stbm_delay.o)
+RCC_APB1PeriphResetCmd                            ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+                                                  ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+                                                  ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+RCC_APB2PeriphClockCmd                            ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+                                                  lib/lib.a(stbm_uart.o)
+                                                  main.o
+RCC_APB2PeriphResetCmd                            ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+                                                  ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+                                                  ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+                                                  ../../libraries/libstm32f10x.a(stm32f10x_gpio.o)
+RCC_AdjustHSICalibrationValue                     ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+RCC_BackupResetCmd                                ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+RCC_ClearFlag                                     ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+RCC_ClearITPendingBit                             ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+RCC_ClockSecuritySystemCmd                        ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+RCC_DeInit                                        ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+RCC_GetClocksFreq                                 ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+                                                  ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+RCC_GetFlagStatus                                 ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+RCC_GetITStatus                                   ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+RCC_GetSYSCLKSource                               ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+RCC_HCLKConfig                                    ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+RCC_HSEConfig                                     ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+RCC_HSICmd                                        ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+RCC_IRQHandler                                    ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+RCC_ITConfig                                      ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+RCC_LSEConfig                                     ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+RCC_LSICmd                                        ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+RCC_MCOConfig                                     ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+RCC_PCLK1Config                                   ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+RCC_PCLK2Config                                   ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+RCC_PLLCmd                                        ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+RCC_PLLConfig                                     ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+RCC_RTCCLKCmd                                     ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+RCC_RTCCLKConfig                                  ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+RCC_SYSCLKConfig                                  ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+RCC_USBCLKConfig                                  ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+RCC_WaitForHSEStartUp                             ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+RTCAlarm_IRQHandler                               ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+RTC_IRQHandler                                    ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+Reset_Handler                                     ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+SDIO_IRQHandler                                   ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+SPI1_IRQHandler                                   ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+SPI2_IRQHandler                                   ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+SPI3_IRQHandler                                   ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+SVC_Handler                                       stm32f10x_it.o
+SysTick_CLKSourceConfig                           ../../libraries/libstm32f10x.a(misc.o)
+SysTick_Handler                                   stm32f10x_it.o
+SystemCoreClock                                   system_stm32f10x.o
+SystemCoreClockUpdate                             system_stm32f10x.o
+SystemInit                                        system_stm32f10x.o
+                                                  ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+                                                  main.o
+TAMPER_IRQHandler                                 ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+TIM1_BRK_IRQHandler                               ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+TIM1_CC_IRQHandler                                ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+TIM1_TRG_COM_IRQHandler                           ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+TIM1_UP_IRQHandler                                ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+TIM2_IRQHandler                                   ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+TIM3_IRQHandler                                   ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+TIM4_IRQHandler                                   ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+TIM5_IRQHandler                                   ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+TIM6_IRQHandler                                   ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+TIM7_IRQHandler                                   ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+TIM8_BRK_IRQHandler                               ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+TIM8_CC_IRQHandler                                ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+TIM8_TRG_COM_IRQHandler                           ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+TIM8_UP_IRQHandler                                ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+TIM_ARRPreloadConfig                              ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_BDTRConfig                                    ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_BDTRStructInit                                ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_CCPreloadControl                              ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_CCxCmd                                        ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_CCxNCmd                                       ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_ClearFlag                                     ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_ClearITPendingBit                             ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_ClearOC1Ref                                   ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_ClearOC2Ref                                   ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_ClearOC3Ref                                   ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_ClearOC4Ref                                   ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_Cmd                                           ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+                                                  lib/lib.a(stbm_delay.o)
+TIM_CounterModeConfig                             ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_CtrlPWMOutputs                                ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_DMACmd                                        ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_DMAConfig                                     ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_DeInit                                        ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_ETRClockMode1Config                           ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_ETRClockMode2Config                           ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_ETRConfig                                     ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_EncoderInterfaceConfig                        ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_ForcedOC1Config                               ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_ForcedOC2Config                               ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_ForcedOC3Config                               ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_ForcedOC4Config                               ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_GenerateEvent                                 ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_GetCapture1                                   ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_GetCapture2                                   ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_GetCapture3                                   ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_GetCapture4                                   ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_GetCounter                                    ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+                                                  lib/lib.a(stbm_delay.o)
+TIM_GetFlagStatus                                 ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_GetITStatus                                   ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_GetPrescaler                                  ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_ICInit                                        ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_ICStructInit                                  ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_ITConfig                                      ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_ITRxExternalClockConfig                       ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_InternalClockConfig                           ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_OC1FastConfig                                 ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_OC1Init                                       ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_OC1NPolarityConfig                            ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_OC1PolarityConfig                             ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_OC1PreloadConfig                              ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_OC2FastConfig                                 ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_OC2Init                                       ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_OC2NPolarityConfig                            ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_OC2PolarityConfig                             ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_OC2PreloadConfig                              ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_OC3FastConfig                                 ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_OC3Init                                       ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_OC3NPolarityConfig                            ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_OC3PolarityConfig                             ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_OC3PreloadConfig                              ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_OC4FastConfig                                 ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_OC4Init                                       ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_OC4PolarityConfig                             ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_OC4PreloadConfig                              ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_OCStructInit                                  ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_PWMIConfig                                    ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_PrescalerConfig                               ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_SelectCCDMA                                   ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_SelectCOM                                     ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_SelectHallSensor                              ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_SelectInputTrigger                            ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_SelectMasterSlaveMode                         ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_SelectOCxM                                    ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_SelectOnePulseMode                            ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+                                                  lib/lib.a(stbm_delay.o)
+TIM_SelectOutputTrigger                           ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_SelectSlaveMode                               ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_SetAutoreload                                 ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_SetClockDivision                              ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_SetCompare1                                   ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_SetCompare2                                   ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_SetCompare3                                   ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_SetCompare4                                   ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_SetCounter                                    ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+                                                  lib/lib.a(stbm_delay.o)
+TIM_SetIC1Prescaler                               ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_SetIC2Prescaler                               ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_SetIC3Prescaler                               ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_SetIC4Prescaler                               ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_TIxExternalClockConfig                        ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_TimeBaseInit                                  ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+                                                  lib/lib.a(stbm_delay.o)
+TIM_TimeBaseStructInit                            ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_TimeBaseStructureMicro                        lib/lib.a(stbm_delay.o)
+TIM_TimeBaseStructureMili                         lib/lib.a(stbm_delay.o)
+TIM_UpdateDisableConfig                           ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TIM_UpdateRequestConfig                           ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+TxData                                            lib/lib.a(stbm_uart.o)
+UART4_IRQHandler                                  ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+UART5_IRQHandler                                  ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+USART1_IRQHandler                                 ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+USART2_IRQHandler                                 ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+USART3_IRQHandler                                 ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+USART_ClearFlag                                   ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+USART_ClearITPendingBit                           ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+USART_ClockInit                                   ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+USART_ClockStructInit                             ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+USART_Cmd                                         ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+                                                  lib/lib.a(stbm_uart.o)
+USART_DMACmd                                      ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+                                                  lib/lib.a(stbm_uart.o)
+USART_DeInit                                      ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+USART_GetFlagStatus                               ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+USART_GetITStatus                                 ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+USART_HalfDuplexCmd                               ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+USART_ITConfig                                    ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+USART_Init                                        ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+                                                  lib/lib.a(stbm_uart.o)
+USART_IrDACmd                                     ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+USART_IrDAConfig                                  ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+USART_LINBreakDetectLengthConfig                  ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+USART_LINCmd                                      ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+USART_OneBitMethodCmd                             ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+USART_OverSampling8Cmd                            ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+USART_ReceiveData                                 ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+USART_ReceiverWakeUpCmd                           ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+USART_SendBreak                                   ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+USART_SendData                                    ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+USART_SetAddress                                  ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+USART_SetGuardTime                                ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+USART_SetPrescaler                                ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+USART_SmartCardCmd                                ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+USART_SmartCardNACKCmd                            ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+USART_StructInit                                  ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+USART_WakeUpConfig                                ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+USBWakeUp_IRQHandler                              ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+USB_HP_CAN1_TX_IRQHandler                         ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+USB_LP_CAN1_RX0_IRQHandler                        ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+UsageFault_Handler                                stm32f10x_it.o
+WWDG_IRQHandler                                   ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+_Jv_RegisterClasses                               /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtbegin.o
+__bss_end__                                       /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+__bss_start__                                     /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+__call_exitprocs                                  /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
+                                                  /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-exit.o)
+__deregister_frame_info                           /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtbegin.o
+__dso_handle                                      /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtbegin.o
+__errno                                           /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-errno.o)
+                                                  syscalls.o
+__fini_array_end                                  /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fini.o)
+__fini_array_start                                /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fini.o)
+__init_array_end                                  /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-init.o)
+__init_array_start                                /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-init.o)
+__libc_fini                                       /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
+__libc_fini_array                                 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fini.o)
+                                                  /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
+                                                  /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+__libc_init_array                                 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-init.o)
+                                                  /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+__preinit_array_end                               /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-init.o)
+__preinit_array_start                             /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-init.o)
+__register_exitproc                               /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__atexit.o)
+                                                  /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-atexit.o)
+                                                  /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+__register_frame_info                             /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtbegin.o
+__stack                                           /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+_close_r                                          syscalls.o
+_ebss                                             ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+_edata                                            ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+_estack                                           ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+_exit                                             /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-exit.o)
+_fini                                             /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crti.o
+                                                  /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-fini.o)
+_fstat_r                                          syscalls.o
+_global_impure_ptr                                /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-impure.o)
+                                                  /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
+                                                  /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-exit.o)
+                                                  /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__atexit.o)
+_impure_ptr                                       /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-impure.o)
+                                                  /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-errno.o)
+_init                                             /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crti.o
+                                                  /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-init.o)
+_isatty_r                                         syscalls.o
+_lseek_r                                          syscalls.o
+_mainCRTStartup                                   /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+_read_r                                           syscalls.o
+_sbrk_r                                           syscalls.o
+_sbss                                             ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+_sdata                                            ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+_sidata                                           ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+_start                                            /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+_write_r                                          syscalls.o
+abort                                             syscalls.o
+atexit                                            /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-atexit.o)
+                                                  /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
+delay_core                                        lib/lib.a(stbm_delay.o)
+delay_ms                                          lib/lib.a(stbm_delay.o)
+                                                  main.o
+delay_us                                          lib/lib.a(stbm_delay.o)
+end                                               syscalls.o
+exit                                              /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-exit.o)
+                                                  /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+free                                              /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__call_atexit.o)
+g_pfnVectors                                      ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+hardware_init_hook                                /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+index_tx_add                                      lib/lib.a(stbm_uart.o)
+index_tx_current                                  lib/lib.a(stbm_uart.o)
+main                                              main.o
+                                                  ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+                                                  /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+malloc                                            /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-__atexit.o)
+memset                                            /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-memset.o)
+                                                  syscalls.o
+                                                  /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+software_init_hook                                /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+start                                             /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+strlen                                            /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strlen.o)
+                                                  lib/lib.a(stbm_uart.o)
+xbee_dma_configuration                            lib/lib.a(stbm_uart.o)
+xbee_init                                         lib/lib.a(stbm_uart.o)
+                                                  main.o
+xbee_nvic_configuration                           lib/lib.a(stbm_uart.o)
+                                                  main.o
+xbee_send_string                                  lib/lib.a(stbm_uart.o)
+                                                  main.o
