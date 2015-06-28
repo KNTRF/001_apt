@@ -38,10 +38,13 @@ int main(void)
 {
 	// 変数宣言
 	uint8_t i = 0;
-	int16_t accel_raw[3];
+	uint8_t wai = 0;
+	int8_t result = 0;
+	int16_t accel_raw[3] = {0,0,0};
+	int16_t gyro_raw[3] = {0,0,0};
 	//int16_t accel_raw_old[3];
 	GPIO_InitTypeDef GPIO_InitStructure;
-	char st[20];
+	char st[30];
 	
 	// ここからプログラム
 	SystemInit();
@@ -68,6 +71,16 @@ int main(void)
 	delay_ms(100);
 	mpu_init();
 	delay_ms(100);
+	mpu_who_am_i(&wai);
+	tsprintf(st, "who am i : 0x%2X\n", wai);
+	xbee_send_string(st);
+	delay_ms(100);
+	tsprintf(st, "ax: %d, ay: %d, az: %d\n", accel_raw[0], accel_raw[1], accel_raw[2]);
+	xbee_send_string(st);
+	delay_ms(100);
+	tsprintf(st, "gx: %d, gy: %d, gz: %d\n", gyro_raw[0], gyro_raw[1], gyro_raw[2]);
+	xbee_send_string(st);
+		
 	
 	while(1){
 		//xbee_send_data(i++);
@@ -90,10 +103,18 @@ int main(void)
 		//xbee_send_string(Message_E);
 		//xbee_send_string("\r\n");
 		//delay_ms(1000);
-		mpu_get_accel_reg(accel_raw);
-		tsprintf(st, "x: %d, y: %d, z: %d\n", accel_raw[0], accel_raw[1], accel_raw[2]);
-		//tsprintf(st,"%d",10);
+		result =mpu_get_accel_reg(accel_raw);
+		delay_ms(10);
+		tsprintf(st, "ax: %d, ay: %d, az: %d   ", accel_raw[0], accel_raw[1], accel_raw[2]);
 		xbee_send_string(st);
+		delay_ms(10);
+		//tsprintf(st, "result=%d\n", result);
+		//xbee_send_string(st);
+		result = mpu_get_gyro_reg(gyro_raw);
+		delay_ms(10);
+		tsprintf(st, "gx: %d, gy: %d, gz: %d\n", gyro_raw[0], gyro_raw[1], gyro_raw[2]);
+		xbee_send_string(st);
+		delay_ms(10);
 		//if(accel_raw_old[2] != accel_raw[2]){
 		//	GPIOA->ODR = _BV(15);
 		//}

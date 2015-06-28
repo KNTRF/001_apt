@@ -251,7 +251,7 @@ LOAD /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4
  *(.flashtext)
                 0x00000000080031e4                . = ALIGN (0x4)
 
-.text           0x00000000080031e4     0x2d74
+.text           0x00000000080031e4     0x2e50
                 0x00000000080031e4                . = ALIGN (0x4)
  *(.text)
  .text          0x00000000080031e4       0x12 stm32f10x_it.o
@@ -272,348 +272,349 @@ LOAD /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4
                 0x0000000008003360                delay_core
                 0x000000000800339a                delay_ms
                 0x00000000080033c4                delay_us
- .text          0x00000000080033f0      0x6a8 lib/lib.a(stbm_mpu.o)
-                0x0000000008003430                mpu_set_gyro_fsr
-                0x000000000800348c                mpu_set_accel_fsr
-                0x00000000080034e0                mpu_set_lpf
-                0x0000000008003540                mpu_set_compass_sample_rate
-                0x000000000800354a                mpu_set_sample_rate
-                0x00000000080035b8                mpu_set_bypass
-                0x0000000008003680                setup_compass
-                0x00000000080037fc                mpu_init
-                0x00000000080038c0                mpu_set_int_latched
-                0x000000000800391c                mpu_set_sensors
-                0x0000000008003a44                mpu_get_accel_reg
- .text          0x0000000008003a98      0x3ec lib/lib.a(stbm_mpu9250.o)
-                0x0000000008003a98                mpu9250_init
-                0x0000000008003b1c                mpu9250_select_cs
-                0x0000000008003b28                mpu9250_deselect_cs
-                0x0000000008003b34                mpu9250_send_byte
-                0x0000000008003b68                mpu9250_read
-                0x0000000008003b88                mpu9250_reads
-                0x0000000008003bb6                mpu9250_write
-                0x0000000008003bd4                mpu9250_writes
-                0x0000000008003bfe                mpu9250_ak8963_read
-                0x0000000008003c8e                mpu9250_ak8963_reads
-                0x0000000008003d38                mpu9250_ak8963_write
-                0x0000000008003dd2                mpu9250_ak8963_writes
- .text          0x0000000008003e84      0x1cc lib/lib.a(stbm_uart.o)
-                0x0000000008003e84                xbee_init
-                0x0000000008003f10                xbee_dma_configuration
-                0x0000000008003f68                xbee_send_string
-                0x0000000008003fcc                xbee_nvic_configuration
-                0x0000000008003fec                DMA1_Channel7_IRQHandler
- .text          0x0000000008004050      0x1f8 lib/lib.a(tsprintf.o)
-                0x00000000080040ca                vtsprintf
-                0x0000000008004230                tsprintf
- .text          0x0000000008004248       0xc0 ../../libraries/libstm32f10x.a(misc.o)
-                0x0000000008004248                NVIC_PriorityGroupConfig
-                0x000000000800425c                NVIC_Init
-                0x00000000080042c4                NVIC_SetVectorTable
-                0x00000000080042d8                NVIC_SystemLPConfig
-                0x00000000080042f0                SysTick_CLKSourceConfig
- .text          0x0000000008004308      0x1dc ../../libraries/libstm32f10x.a(stm32f10x_dma.o)
-                0x0000000008004308                DMA_DeInit
-                0x00000000080043f8                DMA_Init
-                0x0000000008004438                DMA_StructInit
-                0x0000000008004452                DMA_Cmd
-                0x0000000008004468                DMA_ITConfig
-                0x0000000008004478                DMA_SetCurrDataCounter
-                0x000000000800447c                DMA_GetCurrDataCounter
-                0x0000000008004482                DMA_GetFlagStatus
-                0x00000000080044a0                DMA_ClearFlag
-                0x00000000080044b4                DMA_GetITStatus
-                0x00000000080044d0                DMA_ClearITPendingBit
- .text          0x00000000080044e4      0x288 ../../libraries/libstm32f10x.a(stm32f10x_gpio.o)
-                0x00000000080044e4                GPIO_DeInit
-                0x0000000008004590                GPIO_AFIODeInit
-                0x00000000080045a6                GPIO_Init
-                0x0000000008004646                GPIO_StructInit
-                0x0000000008004656                GPIO_ReadInputDataBit
-                0x0000000008004662                GPIO_ReadInputData
-                0x0000000008004668                GPIO_ReadOutputDataBit
-                0x0000000008004674                GPIO_ReadOutputData
-                0x000000000800467a                GPIO_SetBits
-                0x000000000800467e                GPIO_ResetBits
-                0x0000000008004682                GPIO_WriteBit
-                0x000000000800468c                GPIO_Write
-                0x0000000008004690                GPIO_PinLockConfig
-                0x00000000080046a0                GPIO_EventOutputConfig
-                0x00000000080046bc                GPIO_EventOutputCmd
-                0x00000000080046c8                GPIO_PinRemapConfig
-                0x000000000800472c                GPIO_EXTILineConfig
-                0x0000000008004760                GPIO_ETH_MediaInterfaceConfig
- .text          0x000000000800476c      0x34c ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
-                0x000000000800476c                RCC_DeInit
-                0x00000000080047ac                RCC_HSEConfig
-                0x00000000080047e0                RCC_AdjustHSICalibrationValue
-                0x00000000080047f4                RCC_HSICmd
-                0x0000000008004800                RCC_PLLConfig
-                0x0000000008004814                RCC_PLLCmd
-                0x0000000008004820                RCC_SYSCLKConfig
-                0x0000000008004834                RCC_GetSYSCLKSource
-                0x0000000008004844                RCC_HCLKConfig
-                0x0000000008004858                RCC_PCLK1Config
-                0x000000000800486c                RCC_PCLK2Config
-                0x0000000008004880                RCC_ITConfig
-                0x0000000008004898                RCC_USBCLKConfig
-                0x00000000080048a4                RCC_ADCCLKConfig
-                0x00000000080048b8                RCC_LSEConfig
-                0x00000000080048d8                RCC_LSICmd
-                0x00000000080048e4                RCC_RTCCLKConfig
-                0x00000000080048f4                RCC_RTCCLKCmd
-                0x0000000008004900                RCC_GetClocksFreq
-                0x0000000008004998                RCC_AHBPeriphClockCmd
-                0x00000000080049b0                RCC_APB2PeriphClockCmd
-                0x00000000080049c8                RCC_APB1PeriphClockCmd
-                0x00000000080049e0                RCC_APB2PeriphResetCmd
-                0x00000000080049f8                RCC_APB1PeriphResetCmd
-                0x0000000008004a10                RCC_BackupResetCmd
-                0x0000000008004a1c                RCC_ClockSecuritySystemCmd
-                0x0000000008004a28                RCC_MCOConfig
-                0x0000000008004a34                RCC_GetFlagStatus
-                0x0000000008004a5c                RCC_WaitForHSEStartUp
-                0x0000000008004a88                RCC_ClearFlag
-                0x0000000008004a98                RCC_GetITStatus
-                0x0000000008004aac                RCC_ClearITPendingBit
- .text          0x0000000008004ab8      0x2cc ../../libraries/libstm32f10x.a(stm32f10x_spi.o)
-                0x0000000008004ab8                SPI_I2S_DeInit
-                0x0000000008004b1c                SPI_Init
-                0x0000000008004b5a                I2S_Init
-                0x0000000008004c00                SPI_StructInit
-                0x0000000008004c18                I2S_StructInit
-                0x0000000008004c2a                SPI_Cmd
-                0x0000000008004c42                I2S_Cmd
-                0x0000000008004c5a                SPI_I2S_ITConfig
-                0x0000000008004c7a                SPI_I2S_DMACmd
-                0x0000000008004c8c                SPI_I2S_SendData
-                0x0000000008004c90                SPI_I2S_ReceiveData
-                0x0000000008004c96                SPI_NSSInternalSoftwareConfig
-                0x0000000008004cb4                SPI_SSOutputCmd
-                0x0000000008004ccc                SPI_DataSizeConfig
-                0x0000000008004ce2                SPI_TransmitCRC
-                0x0000000008004cee                SPI_CalculateCRC
-                0x0000000008004d06                SPI_GetCRC
-                0x0000000008004d12                SPI_GetCRCPolynomial
-                0x0000000008004d18                SPI_BiDirectionalLineConfig
-                0x0000000008004d34                SPI_I2S_GetFlagStatus
-                0x0000000008004d40                SPI_I2S_ClearFlag
-                0x0000000008004d48                SPI_I2S_GetITStatus
-                0x0000000008004d70                SPI_I2S_ClearITPendingBit
- .text          0x0000000008004d84      0xc9c ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
-                0x0000000008004e64                TIM_DeInit
-                0x0000000008005010                TIM_TimeBaseInit
-                0x00000000080050a4                TIM_OC1Init
-                0x000000000800512c                TIM_OC2Init
-                0x00000000080051b4                TIM_OC3Init
-                0x0000000008005238                TIM_OC4Init
-                0x00000000080052a0                TIM_BDTRConfig
-                0x00000000080052c2                TIM_TimeBaseStructInit
-                0x00000000080052d4                TIM_OCStructInit
-                0x00000000080052e8                TIM_ICStructInit
-                0x00000000080052f8                TIM_BDTRStructInit
-                0x000000000800530a                TIM_Cmd
-                0x0000000008005322                TIM_CtrlPWMOutputs
-                0x000000000800533e                TIM_ITConfig
-                0x0000000008005350                TIM_GenerateEvent
-                0x0000000008005354                TIM_DMAConfig
-                0x000000000800535c                TIM_DMACmd
-                0x000000000800536e                TIM_InternalClockConfig
-                0x000000000800537c                TIM_ITRxExternalClockConfig
-                0x0000000008005396                TIM_TIxExternalClockConfig
-                0x00000000080053ca                TIM_ETRConfig
-                0x00000000080053de                TIM_ETRClockMode2Config
-                0x00000000080053f2                TIM_ETRClockMode1Config
-                0x000000000800540c                TIM_PrescalerConfig
-                0x0000000008005412                TIM_CounterModeConfig
-                0x0000000008005422                TIM_SelectInputTrigger
-                0x0000000008005432                TIM_EncoderInterfaceConfig
-                0x000000000800546e                TIM_ForcedOC1Config
-                0x000000000800547e                TIM_ForcedOC2Config
-                0x0000000008005492                TIM_ForcedOC3Config
-                0x00000000080054a2                TIM_ForcedOC4Config
-                0x00000000080054b6                TIM_ARRPreloadConfig
-                0x00000000080054ce                TIM_SelectCOM
-                0x00000000080054e6                TIM_SelectCCDMA
-                0x00000000080054fe                TIM_CCPreloadControl
-                0x0000000008005516                TIM_OC1PreloadConfig
-                0x0000000008005526                TIM_OC2PreloadConfig
-                0x000000000800553a                TIM_OC3PreloadConfig
-                0x000000000800554a                TIM_OC4PreloadConfig
-                0x000000000800555e                TIM_OC1FastConfig
-                0x000000000800556e                TIM_OC2FastConfig
-                0x0000000008005582                TIM_OC3FastConfig
-                0x0000000008005592                TIM_OC4FastConfig
-                0x00000000080055a6                TIM_ClearOC1Ref
-                0x00000000080055b6                TIM_ClearOC2Ref
-                0x00000000080055c6                TIM_ClearOC3Ref
-                0x00000000080055d6                TIM_ClearOC4Ref
-                0x00000000080055e6                TIM_OC1PolarityConfig
-                0x00000000080055f6                TIM_OC1NPolarityConfig
-                0x0000000008005606                TIM_OC2PolarityConfig
-                0x000000000800561a                TIM_OC2NPolarityConfig
-                0x000000000800562e                TIM_OC3PolarityConfig
-                0x0000000008005642                TIM_OC3NPolarityConfig
-                0x0000000008005656                TIM_OC4PolarityConfig
-                0x000000000800566a                TIM_CCxCmd
-                0x000000000800568c                TIM_CCxNCmd
-                0x00000000080056ae                TIM_SelectOCxM
-                0x00000000080056f2                TIM_UpdateDisableConfig
-                0x000000000800570a                TIM_UpdateRequestConfig
-                0x0000000008005722                TIM_SelectHallSensor
-                0x000000000800573a                TIM_SelectOnePulseMode
-                0x0000000008005750                TIM_SelectOutputTrigger
-                0x0000000008005766                TIM_SelectSlaveMode
-                0x000000000800577c                TIM_SelectMasterSlaveMode
-                0x0000000008005792                TIM_SetCounter
-                0x0000000008005796                TIM_SetAutoreload
-                0x000000000800579a                TIM_SetCompare1
-                0x000000000800579e                TIM_SetCompare2
-                0x00000000080057a2                TIM_SetCompare3
-                0x00000000080057a6                TIM_SetCompare4
-                0x00000000080057ac                TIM_SetIC1Prescaler
-                0x00000000080057c2                TIM_SetIC2Prescaler
-                0x00000000080057dc                TIM_PWMIConfig
-                0x000000000800584a                TIM_SetIC3Prescaler
-                0x0000000008005860                TIM_SetIC4Prescaler
-                0x000000000800587a                TIM_ICInit
-                0x00000000080059b0                TIM_SetClockDivision
-                0x00000000080059c6                TIM_GetCapture1
-                0x00000000080059cc                TIM_GetCapture2
-                0x00000000080059d2                TIM_GetCapture3
-                0x00000000080059d8                TIM_GetCapture4
-                0x00000000080059e0                TIM_GetCounter
-                0x00000000080059e6                TIM_GetPrescaler
-                0x00000000080059ec                TIM_GetFlagStatus
-                0x00000000080059f8                TIM_ClearFlag
-                0x0000000008005a00                TIM_GetITStatus
-                0x0000000008005a16                TIM_ClearITPendingBit
- .text          0x0000000008005a20      0x3a4 ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
-                0x0000000008005a20                USART_DeInit
-                0x0000000008005ab8                USART_Init
-                0x0000000008005b68                USART_StructInit
-                0x0000000008005b7e                USART_ClockInit
-                0x0000000008005b9e                USART_ClockStructInit
-                0x0000000008005baa                USART_Cmd
-                0x0000000008005bc2                USART_ITConfig
-                0x0000000008005bf6                USART_DMACmd
-                0x0000000008005c08                USART_SetAddress
-                0x0000000008005c1e                USART_WakeUpConfig
-                0x0000000008005c34                USART_ReceiverWakeUpCmd
-                0x0000000008005c4c                USART_LINBreakDetectLengthConfig
-                0x0000000008005c62                USART_LINCmd
-                0x0000000008005c7a                USART_SendData
-                0x0000000008005c82                USART_ReceiveData
-                0x0000000008005c8a                USART_SendBreak
-                0x0000000008005c96                USART_SetGuardTime
-                0x0000000008005ca8                USART_SetPrescaler
-                0x0000000008005cba                USART_SmartCardCmd
-                0x0000000008005cd2                USART_SmartCardNACKCmd
-                0x0000000008005cea                USART_HalfDuplexCmd
-                0x0000000008005d02                USART_OverSampling8Cmd
-                0x0000000008005d1a                USART_OneBitMethodCmd
-                0x0000000008005d32                USART_IrDAConfig
-                0x0000000008005d48                USART_IrDACmd
-                0x0000000008005d60                USART_GetFlagStatus
-                0x0000000008005d6c                USART_ClearFlag
-                0x0000000008005d74                USART_GetITStatus
-                0x0000000008005db4                USART_ClearITPendingBit
+ .text          0x00000000080033f0      0x680 lib/lib.a(stbm_mpu.o)
+                0x00000000080033f0                mpu_init
+                0x0000000008003454                mpu_set_gyro_fsr
+                0x00000000080034b0                mpu_set_accel_fsr
+                0x0000000008003504                mpu_set_lpf
+                0x0000000008003564                mpu_set_compass_sample_rate
+                0x00000000080035a4                mpu_set_sample_rate
+                0x0000000008003610                mpu_set_bypass
+                0x00000000080036d8                setup_compass
+                0x0000000008003854                mpu_set_int_latched
+                0x00000000080038b0                mpu_set_sensors
+                0x00000000080039d8                mpu_get_accel_reg
+                0x0000000008003a18                mpu_get_gyro_reg
+                0x0000000008003a58                mpu_who_am_i
+ .text          0x0000000008003a70      0x3ec lib/lib.a(stbm_mpu9250.o)
+                0x0000000008003a70                mpu9250_init
+                0x0000000008003af4                mpu9250_select_cs
+                0x0000000008003b00                mpu9250_deselect_cs
+                0x0000000008003b0c                mpu9250_send_byte
+                0x0000000008003b40                mpu9250_read
+                0x0000000008003b60                mpu9250_reads
+                0x0000000008003b8e                mpu9250_write
+                0x0000000008003bac                mpu9250_writes
+                0x0000000008003bd6                mpu9250_ak8963_read
+                0x0000000008003c66                mpu9250_ak8963_reads
+                0x0000000008003d10                mpu9250_ak8963_write
+                0x0000000008003daa                mpu9250_ak8963_writes
+ .text          0x0000000008003e5c      0x1cc lib/lib.a(stbm_uart.o)
+                0x0000000008003e5c                xbee_init
+                0x0000000008003ee8                xbee_dma_configuration
+                0x0000000008003f40                xbee_send_string
+                0x0000000008003fa4                xbee_nvic_configuration
+                0x0000000008003fc4                DMA1_Channel7_IRQHandler
+ .text          0x0000000008004028      0x1f8 lib/lib.a(tsprintf.o)
+                0x00000000080040a2                vtsprintf
+                0x0000000008004208                tsprintf
+ .text          0x0000000008004220       0xc0 ../../libraries/libstm32f10x.a(misc.o)
+                0x0000000008004220                NVIC_PriorityGroupConfig
+                0x0000000008004234                NVIC_Init
+                0x000000000800429c                NVIC_SetVectorTable
+                0x00000000080042b0                NVIC_SystemLPConfig
+                0x00000000080042c8                SysTick_CLKSourceConfig
+ .text          0x00000000080042e0      0x1dc ../../libraries/libstm32f10x.a(stm32f10x_dma.o)
+                0x00000000080042e0                DMA_DeInit
+                0x00000000080043d0                DMA_Init
+                0x0000000008004410                DMA_StructInit
+                0x000000000800442a                DMA_Cmd
+                0x0000000008004440                DMA_ITConfig
+                0x0000000008004450                DMA_SetCurrDataCounter
+                0x0000000008004454                DMA_GetCurrDataCounter
+                0x000000000800445a                DMA_GetFlagStatus
+                0x0000000008004478                DMA_ClearFlag
+                0x000000000800448c                DMA_GetITStatus
+                0x00000000080044a8                DMA_ClearITPendingBit
+ .text          0x00000000080044bc      0x288 ../../libraries/libstm32f10x.a(stm32f10x_gpio.o)
+                0x00000000080044bc                GPIO_DeInit
+                0x0000000008004568                GPIO_AFIODeInit
+                0x000000000800457e                GPIO_Init
+                0x000000000800461e                GPIO_StructInit
+                0x000000000800462e                GPIO_ReadInputDataBit
+                0x000000000800463a                GPIO_ReadInputData
+                0x0000000008004640                GPIO_ReadOutputDataBit
+                0x000000000800464c                GPIO_ReadOutputData
+                0x0000000008004652                GPIO_SetBits
+                0x0000000008004656                GPIO_ResetBits
+                0x000000000800465a                GPIO_WriteBit
+                0x0000000008004664                GPIO_Write
+                0x0000000008004668                GPIO_PinLockConfig
+                0x0000000008004678                GPIO_EventOutputConfig
+                0x0000000008004694                GPIO_EventOutputCmd
+                0x00000000080046a0                GPIO_PinRemapConfig
+                0x0000000008004704                GPIO_EXTILineConfig
+                0x0000000008004738                GPIO_ETH_MediaInterfaceConfig
+ .text          0x0000000008004744      0x34c ../../libraries/libstm32f10x.a(stm32f10x_rcc.o)
+                0x0000000008004744                RCC_DeInit
+                0x0000000008004784                RCC_HSEConfig
+                0x00000000080047b8                RCC_AdjustHSICalibrationValue
+                0x00000000080047cc                RCC_HSICmd
+                0x00000000080047d8                RCC_PLLConfig
+                0x00000000080047ec                RCC_PLLCmd
+                0x00000000080047f8                RCC_SYSCLKConfig
+                0x000000000800480c                RCC_GetSYSCLKSource
+                0x000000000800481c                RCC_HCLKConfig
+                0x0000000008004830                RCC_PCLK1Config
+                0x0000000008004844                RCC_PCLK2Config
+                0x0000000008004858                RCC_ITConfig
+                0x0000000008004870                RCC_USBCLKConfig
+                0x000000000800487c                RCC_ADCCLKConfig
+                0x0000000008004890                RCC_LSEConfig
+                0x00000000080048b0                RCC_LSICmd
+                0x00000000080048bc                RCC_RTCCLKConfig
+                0x00000000080048cc                RCC_RTCCLKCmd
+                0x00000000080048d8                RCC_GetClocksFreq
+                0x0000000008004970                RCC_AHBPeriphClockCmd
+                0x0000000008004988                RCC_APB2PeriphClockCmd
+                0x00000000080049a0                RCC_APB1PeriphClockCmd
+                0x00000000080049b8                RCC_APB2PeriphResetCmd
+                0x00000000080049d0                RCC_APB1PeriphResetCmd
+                0x00000000080049e8                RCC_BackupResetCmd
+                0x00000000080049f4                RCC_ClockSecuritySystemCmd
+                0x0000000008004a00                RCC_MCOConfig
+                0x0000000008004a0c                RCC_GetFlagStatus
+                0x0000000008004a34                RCC_WaitForHSEStartUp
+                0x0000000008004a60                RCC_ClearFlag
+                0x0000000008004a70                RCC_GetITStatus
+                0x0000000008004a84                RCC_ClearITPendingBit
+ .text          0x0000000008004a90      0x2cc ../../libraries/libstm32f10x.a(stm32f10x_spi.o)
+                0x0000000008004a90                SPI_I2S_DeInit
+                0x0000000008004af4                SPI_Init
+                0x0000000008004b32                I2S_Init
+                0x0000000008004bd8                SPI_StructInit
+                0x0000000008004bf0                I2S_StructInit
+                0x0000000008004c02                SPI_Cmd
+                0x0000000008004c1a                I2S_Cmd
+                0x0000000008004c32                SPI_I2S_ITConfig
+                0x0000000008004c52                SPI_I2S_DMACmd
+                0x0000000008004c64                SPI_I2S_SendData
+                0x0000000008004c68                SPI_I2S_ReceiveData
+                0x0000000008004c6e                SPI_NSSInternalSoftwareConfig
+                0x0000000008004c8c                SPI_SSOutputCmd
+                0x0000000008004ca4                SPI_DataSizeConfig
+                0x0000000008004cba                SPI_TransmitCRC
+                0x0000000008004cc6                SPI_CalculateCRC
+                0x0000000008004cde                SPI_GetCRC
+                0x0000000008004cea                SPI_GetCRCPolynomial
+                0x0000000008004cf0                SPI_BiDirectionalLineConfig
+                0x0000000008004d0c                SPI_I2S_GetFlagStatus
+                0x0000000008004d18                SPI_I2S_ClearFlag
+                0x0000000008004d20                SPI_I2S_GetITStatus
+                0x0000000008004d48                SPI_I2S_ClearITPendingBit
+ .text          0x0000000008004d5c      0xc9c ../../libraries/libstm32f10x.a(stm32f10x_tim.o)
+                0x0000000008004e3c                TIM_DeInit
+                0x0000000008004fe8                TIM_TimeBaseInit
+                0x000000000800507c                TIM_OC1Init
+                0x0000000008005104                TIM_OC2Init
+                0x000000000800518c                TIM_OC3Init
+                0x0000000008005210                TIM_OC4Init
+                0x0000000008005278                TIM_BDTRConfig
+                0x000000000800529a                TIM_TimeBaseStructInit
+                0x00000000080052ac                TIM_OCStructInit
+                0x00000000080052c0                TIM_ICStructInit
+                0x00000000080052d0                TIM_BDTRStructInit
+                0x00000000080052e2                TIM_Cmd
+                0x00000000080052fa                TIM_CtrlPWMOutputs
+                0x0000000008005316                TIM_ITConfig
+                0x0000000008005328                TIM_GenerateEvent
+                0x000000000800532c                TIM_DMAConfig
+                0x0000000008005334                TIM_DMACmd
+                0x0000000008005346                TIM_InternalClockConfig
+                0x0000000008005354                TIM_ITRxExternalClockConfig
+                0x000000000800536e                TIM_TIxExternalClockConfig
+                0x00000000080053a2                TIM_ETRConfig
+                0x00000000080053b6                TIM_ETRClockMode2Config
+                0x00000000080053ca                TIM_ETRClockMode1Config
+                0x00000000080053e4                TIM_PrescalerConfig
+                0x00000000080053ea                TIM_CounterModeConfig
+                0x00000000080053fa                TIM_SelectInputTrigger
+                0x000000000800540a                TIM_EncoderInterfaceConfig
+                0x0000000008005446                TIM_ForcedOC1Config
+                0x0000000008005456                TIM_ForcedOC2Config
+                0x000000000800546a                TIM_ForcedOC3Config
+                0x000000000800547a                TIM_ForcedOC4Config
+                0x000000000800548e                TIM_ARRPreloadConfig
+                0x00000000080054a6                TIM_SelectCOM
+                0x00000000080054be                TIM_SelectCCDMA
+                0x00000000080054d6                TIM_CCPreloadControl
+                0x00000000080054ee                TIM_OC1PreloadConfig
+                0x00000000080054fe                TIM_OC2PreloadConfig
+                0x0000000008005512                TIM_OC3PreloadConfig
+                0x0000000008005522                TIM_OC4PreloadConfig
+                0x0000000008005536                TIM_OC1FastConfig
+                0x0000000008005546                TIM_OC2FastConfig
+                0x000000000800555a                TIM_OC3FastConfig
+                0x000000000800556a                TIM_OC4FastConfig
+                0x000000000800557e                TIM_ClearOC1Ref
+                0x000000000800558e                TIM_ClearOC2Ref
+                0x000000000800559e                TIM_ClearOC3Ref
+                0x00000000080055ae                TIM_ClearOC4Ref
+                0x00000000080055be                TIM_OC1PolarityConfig
+                0x00000000080055ce                TIM_OC1NPolarityConfig
+                0x00000000080055de                TIM_OC2PolarityConfig
+                0x00000000080055f2                TIM_OC2NPolarityConfig
+                0x0000000008005606                TIM_OC3PolarityConfig
+                0x000000000800561a                TIM_OC3NPolarityConfig
+                0x000000000800562e                TIM_OC4PolarityConfig
+                0x0000000008005642                TIM_CCxCmd
+                0x0000000008005664                TIM_CCxNCmd
+                0x0000000008005686                TIM_SelectOCxM
+                0x00000000080056ca                TIM_UpdateDisableConfig
+                0x00000000080056e2                TIM_UpdateRequestConfig
+                0x00000000080056fa                TIM_SelectHallSensor
+                0x0000000008005712                TIM_SelectOnePulseMode
+                0x0000000008005728                TIM_SelectOutputTrigger
+                0x000000000800573e                TIM_SelectSlaveMode
+                0x0000000008005754                TIM_SelectMasterSlaveMode
+                0x000000000800576a                TIM_SetCounter
+                0x000000000800576e                TIM_SetAutoreload
+                0x0000000008005772                TIM_SetCompare1
+                0x0000000008005776                TIM_SetCompare2
+                0x000000000800577a                TIM_SetCompare3
+                0x000000000800577e                TIM_SetCompare4
+                0x0000000008005784                TIM_SetIC1Prescaler
+                0x000000000800579a                TIM_SetIC2Prescaler
+                0x00000000080057b4                TIM_PWMIConfig
+                0x0000000008005822                TIM_SetIC3Prescaler
+                0x0000000008005838                TIM_SetIC4Prescaler
+                0x0000000008005852                TIM_ICInit
+                0x0000000008005988                TIM_SetClockDivision
+                0x000000000800599e                TIM_GetCapture1
+                0x00000000080059a4                TIM_GetCapture2
+                0x00000000080059aa                TIM_GetCapture3
+                0x00000000080059b0                TIM_GetCapture4
+                0x00000000080059b8                TIM_GetCounter
+                0x00000000080059be                TIM_GetPrescaler
+                0x00000000080059c4                TIM_GetFlagStatus
+                0x00000000080059d0                TIM_ClearFlag
+                0x00000000080059d8                TIM_GetITStatus
+                0x00000000080059ee                TIM_ClearITPendingBit
+ .text          0x00000000080059f8      0x3a4 ../../libraries/libstm32f10x.a(stm32f10x_usart.o)
+                0x00000000080059f8                USART_DeInit
+                0x0000000008005a90                USART_Init
+                0x0000000008005b40                USART_StructInit
+                0x0000000008005b56                USART_ClockInit
+                0x0000000008005b76                USART_ClockStructInit
+                0x0000000008005b82                USART_Cmd
+                0x0000000008005b9a                USART_ITConfig
+                0x0000000008005bce                USART_DMACmd
+                0x0000000008005be0                USART_SetAddress
+                0x0000000008005bf6                USART_WakeUpConfig
+                0x0000000008005c0c                USART_ReceiverWakeUpCmd
+                0x0000000008005c24                USART_LINBreakDetectLengthConfig
+                0x0000000008005c3a                USART_LINCmd
+                0x0000000008005c52                USART_SendData
+                0x0000000008005c5a                USART_ReceiveData
+                0x0000000008005c62                USART_SendBreak
+                0x0000000008005c6e                USART_SetGuardTime
+                0x0000000008005c80                USART_SetPrescaler
+                0x0000000008005c92                USART_SmartCardCmd
+                0x0000000008005caa                USART_SmartCardNACKCmd
+                0x0000000008005cc2                USART_HalfDuplexCmd
+                0x0000000008005cda                USART_OverSampling8Cmd
+                0x0000000008005cf2                USART_OneBitMethodCmd
+                0x0000000008005d0a                USART_IrDAConfig
+                0x0000000008005d20                USART_IrDACmd
+                0x0000000008005d38                USART_GetFlagStatus
+                0x0000000008005d44                USART_ClearFlag
+                0x0000000008005d4c                USART_GetITStatus
+                0x0000000008005d8c                USART_ClearITPendingBit
  *(.text.*)
- .text.startup  0x0000000008005dc4       0xcc main.o
-                0x0000000008005dc4                main
+ .text.startup  0x0000000008005d9c      0x18c main.o
+                0x0000000008005d9c                main
  .text.Reset_Handler
-                0x0000000008005e90       0x4c ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
-                0x0000000008005e90                Reset_Handler
+                0x0000000008005f28       0x4c ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+                0x0000000008005f28                Reset_Handler
  .text.Default_Handler
-                0x0000000008005edc        0x4 ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
-                0x0000000008005edc                DMA2_Channel3_IRQHandler
-                0x0000000008005edc                TIM8_TRG_COM_IRQHandler
-                0x0000000008005edc                TIM8_CC_IRQHandler
-                0x0000000008005edc                TIM1_CC_IRQHandler
-                0x0000000008005edc                TIM6_IRQHandler
-                0x0000000008005edc                PVD_IRQHandler
-                0x0000000008005edc                SDIO_IRQHandler
-                0x0000000008005edc                EXTI3_IRQHandler
-                0x0000000008005edc                EXTI0_IRQHandler
-                0x0000000008005edc                I2C2_EV_IRQHandler
-                0x0000000008005edc                ADC1_2_IRQHandler
-                0x0000000008005edc                SPI1_IRQHandler
-                0x0000000008005edc                TAMPER_IRQHandler
-                0x0000000008005edc                TIM8_UP_IRQHandler
-                0x0000000008005edc                DMA2_Channel2_IRQHandler
-                0x0000000008005edc                DMA1_Channel4_IRQHandler
-                0x0000000008005edc                USART3_IRQHandler
-                0x0000000008005edc                RTC_IRQHandler
-                0x0000000008005edc                CAN1_RX1_IRQHandler
-                0x0000000008005edc                UART5_IRQHandler
-                0x0000000008005edc                ADC3_IRQHandler
-                0x0000000008005edc                TIM4_IRQHandler
-                0x0000000008005edc                DMA2_Channel1_IRQHandler
-                0x0000000008005edc                I2C1_EV_IRQHandler
-                0x0000000008005edc                DMA1_Channel6_IRQHandler
-                0x0000000008005edc                UART4_IRQHandler
-                0x0000000008005edc                TIM3_IRQHandler
-                0x0000000008005edc                RCC_IRQHandler
-                0x0000000008005edc                TIM1_TRG_COM_IRQHandler
-                0x0000000008005edc                DMA1_Channel1_IRQHandler
-                0x0000000008005edc                Default_Handler
-                0x0000000008005edc                EXTI15_10_IRQHandler
-                0x0000000008005edc                TIM7_IRQHandler
-                0x0000000008005edc                TIM5_IRQHandler
-                0x0000000008005edc                EXTI9_5_IRQHandler
-                0x0000000008005edc                SPI2_IRQHandler
-                0x0000000008005edc                DMA1_Channel5_IRQHandler
-                0x0000000008005edc                EXTI4_IRQHandler
-                0x0000000008005edc                USB_LP_CAN1_RX0_IRQHandler
-                0x0000000008005edc                USB_HP_CAN1_TX_IRQHandler
-                0x0000000008005edc                DMA1_Channel3_IRQHandler
-                0x0000000008005edc                FSMC_IRQHandler
-                0x0000000008005edc                TIM1_UP_IRQHandler
-                0x0000000008005edc                WWDG_IRQHandler
-                0x0000000008005edc                TIM2_IRQHandler
-                0x0000000008005edc                TIM1_BRK_IRQHandler
-                0x0000000008005edc                EXTI1_IRQHandler
-                0x0000000008005edc                RTCAlarm_IRQHandler
-                0x0000000008005edc                DMA2_Channel4_5_IRQHandler
-                0x0000000008005edc                USART2_IRQHandler
-                0x0000000008005edc                I2C2_ER_IRQHandler
-                0x0000000008005edc                DMA1_Channel2_IRQHandler
-                0x0000000008005edc                TIM8_BRK_IRQHandler
-                0x0000000008005edc                CAN1_SCE_IRQHandler
-                0x0000000008005edc                FLASH_IRQHandler
-                0x0000000008005edc                USART1_IRQHandler
-                0x0000000008005edc                SPI3_IRQHandler
-                0x0000000008005edc                I2C1_ER_IRQHandler
-                0x0000000008005edc                USBWakeUp_IRQHandler
-                0x0000000008005edc                EXTI2_IRQHandler
- .text.strlen   0x0000000008005ee0       0x60 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strlen.o)
-                0x0000000008005ee0                strlen
+                0x0000000008005f74        0x4 ../../libraries/CMSIS/Device/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_hd.o
+                0x0000000008005f74                DMA2_Channel3_IRQHandler
+                0x0000000008005f74                TIM8_TRG_COM_IRQHandler
+                0x0000000008005f74                TIM8_CC_IRQHandler
+                0x0000000008005f74                TIM1_CC_IRQHandler
+                0x0000000008005f74                TIM6_IRQHandler
+                0x0000000008005f74                PVD_IRQHandler
+                0x0000000008005f74                SDIO_IRQHandler
+                0x0000000008005f74                EXTI3_IRQHandler
+                0x0000000008005f74                EXTI0_IRQHandler
+                0x0000000008005f74                I2C2_EV_IRQHandler
+                0x0000000008005f74                ADC1_2_IRQHandler
+                0x0000000008005f74                SPI1_IRQHandler
+                0x0000000008005f74                TAMPER_IRQHandler
+                0x0000000008005f74                TIM8_UP_IRQHandler
+                0x0000000008005f74                DMA2_Channel2_IRQHandler
+                0x0000000008005f74                DMA1_Channel4_IRQHandler
+                0x0000000008005f74                USART3_IRQHandler
+                0x0000000008005f74                RTC_IRQHandler
+                0x0000000008005f74                CAN1_RX1_IRQHandler
+                0x0000000008005f74                UART5_IRQHandler
+                0x0000000008005f74                ADC3_IRQHandler
+                0x0000000008005f74                TIM4_IRQHandler
+                0x0000000008005f74                DMA2_Channel1_IRQHandler
+                0x0000000008005f74                I2C1_EV_IRQHandler
+                0x0000000008005f74                DMA1_Channel6_IRQHandler
+                0x0000000008005f74                UART4_IRQHandler
+                0x0000000008005f74                TIM3_IRQHandler
+                0x0000000008005f74                RCC_IRQHandler
+                0x0000000008005f74                TIM1_TRG_COM_IRQHandler
+                0x0000000008005f74                DMA1_Channel1_IRQHandler
+                0x0000000008005f74                Default_Handler
+                0x0000000008005f74                EXTI15_10_IRQHandler
+                0x0000000008005f74                TIM7_IRQHandler
+                0x0000000008005f74                TIM5_IRQHandler
+                0x0000000008005f74                EXTI9_5_IRQHandler
+                0x0000000008005f74                SPI2_IRQHandler
+                0x0000000008005f74                DMA1_Channel5_IRQHandler
+                0x0000000008005f74                EXTI4_IRQHandler
+                0x0000000008005f74                USB_LP_CAN1_RX0_IRQHandler
+                0x0000000008005f74                USB_HP_CAN1_TX_IRQHandler
+                0x0000000008005f74                DMA1_Channel3_IRQHandler
+                0x0000000008005f74                FSMC_IRQHandler
+                0x0000000008005f74                TIM1_UP_IRQHandler
+                0x0000000008005f74                WWDG_IRQHandler
+                0x0000000008005f74                TIM2_IRQHandler
+                0x0000000008005f74                TIM1_BRK_IRQHandler
+                0x0000000008005f74                EXTI1_IRQHandler
+                0x0000000008005f74                RTCAlarm_IRQHandler
+                0x0000000008005f74                DMA2_Channel4_5_IRQHandler
+                0x0000000008005f74                USART2_IRQHandler
+                0x0000000008005f74                I2C2_ER_IRQHandler
+                0x0000000008005f74                DMA1_Channel2_IRQHandler
+                0x0000000008005f74                TIM8_BRK_IRQHandler
+                0x0000000008005f74                CAN1_SCE_IRQHandler
+                0x0000000008005f74                FLASH_IRQHandler
+                0x0000000008005f74                USART1_IRQHandler
+                0x0000000008005f74                SPI3_IRQHandler
+                0x0000000008005f74                I2C1_ER_IRQHandler
+                0x0000000008005f74                USBWakeUp_IRQHandler
+                0x0000000008005f74                EXTI2_IRQHandler
+ .text.strlen   0x0000000008005f78       0x60 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/libc.a(lib_a-strlen.o)
+                0x0000000008005f78                strlen
  *(.rodata)
  *(.rodata*)
  .rodata.str1.1
-                0x0000000008005f40       0x15 main.o
+                0x0000000008005fd8       0x5c main.o
  *(.glue_7)
  .glue_7        0x0000000000000000        0x0 linker stubs
  *(.glue_7t)
  .glue_7t       0x0000000000000000        0x0 linker stubs
-                0x0000000008005f58                . = ALIGN (0x4)
- *fill*         0x0000000008005f55        0x3 00
-                0x0000000008005f58                _etext = .
-                0x0000000008005f58                _sidata = _etext
+                0x0000000008006034                . = ALIGN (0x4)
+                0x0000000008006034                _etext = .
+                0x0000000008006034                _sidata = _etext
 
-.vfp11_veneer   0x0000000008005f58        0x0
+.vfp11_veneer   0x0000000008006034        0x0
  .vfp11_veneer  0x0000000000000000        0x0 linker stubs
 
-.v4_bx          0x0000000008005f58        0x0
+.v4_bx          0x0000000008006034        0x0
  .v4_bx         0x0000000000000000        0x0 linker stubs
 
-.iplt           0x0000000008005f58        0x0
+.iplt           0x0000000008006034        0x0
  .iplt          0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtbegin.o
 
-.rel.dyn        0x0000000008005f58        0x0
+.rel.dyn        0x0000000008006034        0x0
  .rel.iplt      0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtbegin.o
 
-.data           0x0000000020000000       0x3c load address 0x0000000008005f58
+.data           0x0000000020000000       0x3c load address 0x0000000008006034
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -628,10 +629,10 @@ LOAD /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4
                 0x000000002000003c                . = ALIGN (0x4)
                 0x000000002000003c                _edata = .
 
-.igot.plt       0x000000002000003c        0x0 load address 0x0000000008005f94
+.igot.plt       0x000000002000003c        0x0 load address 0x0000000008006070
  .igot.plt      0x0000000000000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/armv7-m/crtbegin.o
 
-.bss            0x000000002000003c       0x70 load address 0x0000000008005f94
+.bss            0x000000002000003c       0x70 load address 0x0000000008006070
                 0x000000002000003c                . = ALIGN (0x4)
                 0x000000002000003c                _sbss = .
  *(.bss)
@@ -648,7 +649,7 @@ LOAD /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4
                 0x00000000200000ac                PROVIDE (end, _ebss)
                 0x00000000200000ac                PROVIDE (_end, _ebss)
 
-._usrstack      0x00000000200000ac      0x800 load address 0x0000000008006004
+._usrstack      0x00000000200000ac      0x800 load address 0x00000000080060e0
                 0x00000000200000ac                . = ALIGN (0x4)
                 0x00000000200000ac                _susrstack = .
                 0x00000000200008ac                . = (. + _Minimum_Stack_Size)
@@ -1245,6 +1246,8 @@ mpu9250_writes                                    lib/lib.a(stbm_mpu9250.o)
                                                   lib/lib.a(stbm_mpu.o)
 mpu_get_accel_reg                                 lib/lib.a(stbm_mpu.o)
                                                   main.o
+mpu_get_gyro_reg                                  lib/lib.a(stbm_mpu.o)
+                                                  main.o
 mpu_init                                          lib/lib.a(stbm_mpu.o)
                                                   main.o
 mpu_set_accel_fsr                                 lib/lib.a(stbm_mpu.o)
@@ -1255,6 +1258,8 @@ mpu_set_int_latched                               lib/lib.a(stbm_mpu.o)
 mpu_set_lpf                                       lib/lib.a(stbm_mpu.o)
 mpu_set_sample_rate                               lib/lib.a(stbm_mpu.o)
 mpu_set_sensors                                   lib/lib.a(stbm_mpu.o)
+mpu_who_am_i                                      lib/lib.a(stbm_mpu.o)
+                                                  main.o
 setup_compass                                     lib/lib.a(stbm_mpu.o)
 software_init_hook                                /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/crt0.o
 start                                             /usr/local/Cellar/gcc-arm-none-eabi/20140408/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7-m/crt0.o
